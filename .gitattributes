@@ -1,0 +1,5 @@
+# Data files are compared byte-for-byte (reproducibility checks, recorded SHA-256 of the CPCB CSV),
+# so never convert their line endings on checkout.
+data/**/*.csv  text eol=lf
+data/**/*.json text eol=lf
+*.pdf binary

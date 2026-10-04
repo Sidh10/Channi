@@ -1,0 +1,3659 @@
+{
+ "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+ "example": "seed 2026, injection group fabricate|add|last_day, scenario {'kind': 'fabricate', 'mode': 'add', 'fraction': 0.05, 'n_entries': None, 'placement': 'last_day', 'inflate_factor': 1.5, 'inflate_dequantize': True, 'n_targets': 1}",
+ "engine_version": "0.1.0",
+ "params": {
+  "engine_version": "0.1.0",
+  "config": {
+   "alpha": 0.01,
+   "multiple_testing": "benjamini_hochberg_joint_over_all_ward_check_pairs",
+   "roundness_resolutions_kg": [
+    10,
+    100,
+    1000
+   ],
+   "huber_c": 1.345,
+   "baseline_direction": "upper",
+   "benford_min_expected": 5.0,
+   "benford_min_span_decades": 1.0,
+   "benford_reference": "benford",
+   "checks": [
+    "benford",
+    "roundness",
+    "baseline",
+    "baseline_daily"
+   ]
+  },
+  "period_start": "2026-07-06",
+  "period_end": "2026-08-02",
+  "n_days": 28
+ },
+ "summary": {
+  "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+  "data_origin_wards": {
+   "synthetic": 40
+  },
+  "data_origin_logs": {
+   "synthetic": 147685
+  },
+  "n_wards_scored": 40,
+  "n_entries_audited": 147685,
+  "n_tests": 160,
+  "alpha": 0.01,
+  "n_wards_flagged": 1,
+  "flagged_wards": [
+   "SYN-W27"
+  ],
+  "flagged_by_check": {
+   "benford": [],
+   "roundness": [],
+   "baseline": [],
+   "baseline_daily": [
+    "SYN-W27"
+   ]
+  },
+  "wards_without_entries": []
+ },
+ "ward_scores": [
+  {
+   "ward_code": "SYN-W01",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4046,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4046,
+     "chi2": 3.8998,
+     "df": 8,
+     "p_value": 0.866049,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.011598,
+     "mad": 0.002852,
+     "span_decades_p5_p95": 1.8575,
+     "first_digit_counts": {
+      "1": 1239,
+      "2": 674,
+      "3": 514,
+      "4": 387,
+      "5": 312,
+      "6": 287,
+      "7": 236,
+      "8": 210,
+      "9": 187
+     }
+    },
+    "roundness": {
+     "p_value": 0.650251,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4046,
+       "round": 383,
+       "rate": 0.094661,
+       "reference_rate_other_wards": 0.100356,
+       "p_value": 0.888685
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 3933,
+       "round": 43,
+       "rate": 0.010933,
+       "reference_rate_other_wards": 0.010555,
+       "p_value": 0.431084
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2039,
+       "round": 4,
+       "rate": 0.001962,
+       "reference_rate_other_wards": 0.001149,
+       "p_value": 0.21675
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 330.356,
+     "predicted_mean_daily_t": 305.934,
+     "observed_over_predicted": 1.0798,
+     "z": 0.6716,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.253071,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.3045,
+     "ward_scale_log": 0.16324,
+     "max_z_date": "2026-07-23",
+     "p_value": 0.296711,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W02",
+   "confidence_score": 0.6326,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4126,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4126,
+     "chi2": 3.9718,
+     "df": 8,
+     "p_value": 0.85966,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.008752,
+     "mad": 0.002483,
+     "span_decades_p5_p95": 1.837,
+     "first_digit_counts": {
+      "1": 1238,
+      "2": 744,
+      "3": 494,
+      "4": 405,
+      "5": 323,
+      "6": 293,
+      "7": 246,
+      "8": 210,
+      "9": 173
+     }
+    },
+    "roundness": {
+     "p_value": 0.0489035,
+     "q_value": 0.632632,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4126,
+       "round": 455,
+       "rate": 0.110276,
+       "reference_rate_other_wards": 0.09991,
+       "p_value": 0.0163012
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4031,
+       "round": 39,
+       "rate": 0.009675,
+       "reference_rate_other_wards": 0.010591,
+       "p_value": 0.73383
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2106,
+       "round": 4,
+       "rate": 0.001899,
+       "reference_rate_other_wards": 0.00115,
+       "p_value": 0.233404
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 332.983,
+     "predicted_mean_daily_t": 340.349,
+     "observed_over_predicted": 0.9784,
+     "z": -0.1913,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.575326,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.026,
+     "ward_scale_log": 0.16031,
+     "max_z_date": "2026-07-13",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W03",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 3003,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 3003,
+     "chi2": 1.6131,
+     "df": 8,
+     "p_value": 0.990667,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.007991,
+     "mad": 0.002438,
+     "span_decades_p5_p95": 1.8429,
+     "first_digit_counts": {
+      "1": 890,
+      "2": 541,
+      "3": 383,
+      "4": 280,
+      "5": 235,
+      "6": 206,
+      "7": 169,
+      "8": 157,
+      "9": 142
+     }
+    },
+    "roundness": {
+     "p_value": 0.792683,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 3003,
+       "round": 291,
+       "rate": 0.096903,
+       "reference_rate_other_wards": 0.100268,
+       "p_value": 0.736927
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2935,
+       "round": 34,
+       "rate": 0.011584,
+       "reference_rate_other_wards": 0.010544,
+       "p_value": 0.316689
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1523,
+       "round": 3,
+       "rate": 0.00197,
+       "reference_rate_other_wards": 0.001154,
+       "p_value": 0.264228
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 248.206,
+     "predicted_mean_daily_t": 276.309,
+     "observed_over_predicted": 0.8983,
+     "z": -0.9379,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.822723,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.2442,
+     "ward_scale_log": 0.17743,
+     "max_z_date": "2026-07-16",
+     "p_value": 0.347503,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W04",
+   "confidence_score": 0.8115,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2526,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2526,
+     "chi2": 14.4393,
+     "df": 8,
+     "p_value": 0.0710093,
+     "q_value": 0.811535,
+     "flagged": false,
+     "d_star": 0.025036,
+     "mad": 0.006834,
+     "span_decades_p5_p95": 1.8266,
+     "first_digit_counts": {
+      "1": 777,
+      "2": 481,
+      "3": 270,
+      "4": 254,
+      "5": 196,
+      "6": 177,
+      "7": 135,
+      "8": 137,
+      "9": 99
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2526,
+       "round": 242,
+       "rate": 0.095804,
+       "reference_rate_other_wards": 0.100276,
+       "p_value": 0.780006
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2467,
+       "round": 22,
+       "rate": 0.008918,
+       "reference_rate_other_wards": 0.010594,
+       "p_value": 0.816435
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1281,
+       "round": 1,
+       "rate": 0.000781,
+       "reference_rate_other_wards": 0.001178,
+       "p_value": 0.779928
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 198.758,
+     "predicted_mean_daily_t": 235.436,
+     "observed_over_predicted": 0.8442,
+     "z": -1.4808,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.92632,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.4237,
+     "ward_scale_log": 0.18521,
+     "max_z_date": "2026-07-19",
+     "p_value": 0.215107,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W05",
+   "confidence_score": 0.6326,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 3972,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 3972,
+     "chi2": 18.4703,
+     "df": 8,
+     "p_value": 0.0179644,
+     "q_value": 0.632632,
+     "flagged": false,
+     "d_star": 0.02192,
+     "mad": 0.005756,
+     "span_decades_p5_p95": 1.823,
+     "first_digit_counts": {
+      "1": 1181,
+      "2": 774,
+      "3": 498,
+      "4": 394,
+      "5": 332,
+      "6": 247,
+      "7": 204,
+      "8": 181,
+      "9": 161
+     }
+    },
+    "roundness": {
+     "p_value": 0.0478073,
+     "q_value": 0.632632,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 3972,
+       "round": 439,
+       "rate": 0.110524,
+       "reference_rate_other_wards": 0.099914,
+       "p_value": 0.0159358
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 3887,
+       "round": 48,
+       "rate": 0.012349,
+       "reference_rate_other_wards": 0.010516,
+       "p_value": 0.153161
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1978,
+       "round": 3,
+       "rate": 0.001517,
+       "reference_rate_other_wards": 0.001161,
+       "p_value": 0.409342
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 310.606,
+     "predicted_mean_daily_t": 286.716,
+     "observed_over_predicted": 1.0833,
+     "z": 0.6998,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.244277,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.5886,
+     "ward_scale_log": 0.16263,
+     "max_z_date": "2026-07-20",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W06",
+   "confidence_score": 0.9421,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 5055,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 5055,
+     "chi2": 3.9323,
+     "df": 8,
+     "p_value": 0.863178,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.008396,
+     "mad": 0.002041,
+     "span_decades_p5_p95": 1.8443,
+     "first_digit_counts": {
+      "1": 1525,
+      "2": 855,
+      "3": 639,
+      "4": 485,
+      "5": 402,
+      "6": 332,
+      "7": 294,
+      "8": 278,
+      "9": 245
+     }
+    },
+    "roundness": {
+     "p_value": 0.0942065,
+     "q_value": 0.942065,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 5055,
+       "round": 462,
+       "rate": 0.091395,
+       "reference_rate_other_wards": 0.100512,
+       "p_value": 0.984908
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4907,
+       "round": 53,
+       "rate": 0.010801,
+       "reference_rate_other_wards": 0.010557,
+       "p_value": 0.454331
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2573,
+       "round": 7,
+       "rate": 0.002721,
+       "reference_rate_other_wards": 0.001115,
+       "p_value": 0.0314022
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 409.277,
+     "predicted_mean_daily_t": 412.737,
+     "observed_over_predicted": 0.9916,
+     "z": -0.0736,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.529135,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.1157,
+     "ward_scale_log": 0.15294,
+     "max_z_date": "2026-07-26",
+     "p_value": 0.481138,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W07",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2637,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2637,
+     "chi2": 2.4904,
+     "df": 8,
+     "p_value": 0.962176,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.009013,
+     "mad": 0.002878,
+     "span_decades_p5_p95": 1.8506,
+     "first_digit_counts": {
+      "1": 804,
+      "2": 455,
+      "3": 326,
+      "4": 266,
+      "5": 198,
+      "6": 166,
+      "7": 156,
+      "8": 139,
+      "9": 127
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2637,
+       "round": 256,
+       "rate": 0.09708,
+       "reference_rate_other_wards": 0.100256,
+       "p_value": 0.714098
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2573,
+       "round": 23,
+       "rate": 0.008939,
+       "reference_rate_other_wards": 0.010595,
+       "p_value": 0.817805
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1328,
+       "round": 1,
+       "rate": 0.000753,
+       "reference_rate_other_wards": 0.001178,
+       "p_value": 0.791923
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 215.514,
+     "predicted_mean_daily_t": 222.995,
+     "observed_over_predicted": 0.9665,
+     "z": -0.2984,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.616442,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.1368,
+     "ward_scale_log": 0.18301,
+     "max_z_date": "2026-07-12",
+     "p_value": 0.456611,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W08",
+   "confidence_score": 0.6326,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 6803,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 6803,
+     "chi2": 4.387,
+     "df": 8,
+     "p_value": 0.820631,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.008882,
+     "mad": 0.002577,
+     "span_decades_p5_p95": 1.8483,
+     "first_digit_counts": {
+      "1": 2087,
+      "2": 1221,
+      "3": 865,
+      "4": 629,
+      "5": 518,
+      "6": 449,
+      "7": 381,
+      "8": 340,
+      "9": 313
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 6803,
+       "round": 665,
+       "rate": 0.097751,
+       "reference_rate_other_wards": 0.100318,
+       "p_value": 0.760181
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 6646,
+       "round": 70,
+       "rate": 0.010533,
+       "reference_rate_other_wards": 0.010567,
+       "p_value": 0.527836
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 3356,
+       "round": 1,
+       "rate": 0.000298,
+       "reference_rate_other_wards": 0.001212,
+       "p_value": 0.982104
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 536.123,
+     "predicted_mean_daily_t": 513.383,
+     "observed_over_predicted": 1.0443,
+     "z": 0.379,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.353462,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 3.2698,
+     "ward_scale_log": 0.14451,
+     "max_z_date": "2026-07-23",
+     "p_value": 0.0150648,
+     "q_value": 0.632632,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W09",
+   "confidence_score": 0.9749,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 5287,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 5287,
+     "chi2": 6.9297,
+     "df": 8,
+     "p_value": 0.544237,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.009635,
+     "mad": 0.002962,
+     "span_decades_p5_p95": 1.8406,
+     "first_digit_counts": {
+      "1": 1601,
+      "2": 910,
+      "3": 641,
+      "4": 503,
+      "5": 444,
+      "6": 351,
+      "7": 289,
+      "8": 298,
+      "9": 250
+     }
+    },
+    "roundness": {
+     "p_value": 0.919853,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 5287,
+       "round": 541,
+       "rate": 0.102326,
+       "reference_rate_other_wards": 0.100121,
+       "p_value": 0.306618
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 5162,
+       "round": 50,
+       "rate": 0.009686,
+       "reference_rate_other_wards": 0.010598,
+       "p_value": 0.75415
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2612,
+       "round": 1,
+       "rate": 0.000383,
+       "reference_rate_other_wards": 0.0012,
+       "p_value": 0.955626
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 423.644,
+     "predicted_mean_daily_t": 373.229,
+     "observed_over_predicted": 1.1351,
+     "z": 1.1079,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.137626,
+     "q_value": 0.974893,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.684,
+     "ward_scale_log": 0.15303,
+     "max_z_date": "2026-07-20",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W10",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2398,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2398,
+     "chi2": 5.235,
+     "df": 8,
+     "p_value": 0.732186,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.01639,
+     "mad": 0.004219,
+     "span_decades_p5_p95": 1.8147,
+     "first_digit_counts": {
+      "1": 712,
+      "2": 456,
+      "3": 289,
+      "4": 230,
+      "5": 181,
+      "6": 172,
+      "7": 132,
+      "8": 123,
+      "9": 103
+     }
+    },
+    "roundness": {
+     "p_value": 0.49506,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2398,
+       "round": 244,
+       "rate": 0.101751,
+       "reference_rate_other_wards": 0.100174,
+       "p_value": 0.409337
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2350,
+       "round": 19,
+       "rate": 0.008085,
+       "reference_rate_other_wards": 0.010606,
+       "p_value": 0.905441
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1195,
+       "round": 3,
+       "rate": 0.00251,
+       "reference_rate_other_wards": 0.001149,
+       "p_value": 0.16502
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 188.28,
+     "predicted_mean_daily_t": 168.2,
+     "observed_over_predicted": 1.1194,
+     "z": 0.9862,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.165321,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.7811,
+     "ward_scale_log": 0.19234,
+     "max_z_date": "2026-07-12",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W11",
+   "confidence_score": 0.6326,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4020,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4020,
+     "chi2": 12.0333,
+     "df": 8,
+     "p_value": 0.149724,
+     "q_value": 0.997592,
+     "flagged": false,
+     "d_star": 0.014766,
+     "mad": 0.004699,
+     "span_decades_p5_p95": 1.8364,
+     "first_digit_counts": {
+      "1": 1212,
+      "2": 729,
+      "3": 532,
+      "4": 409,
+      "5": 299,
+      "6": 243,
+      "7": 246,
+      "8": 180,
+      "9": 170
+     }
+    },
+    "roundness": {
+     "p_value": 0.257102,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4020,
+       "round": 377,
+       "rate": 0.093781,
+       "reference_rate_other_wards": 0.100379,
+       "p_value": 0.920368
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 3927,
+       "round": 34,
+       "rate": 0.008658,
+       "reference_rate_other_wards": 0.010619,
+       "p_value": 0.899981
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1999,
+       "round": 5,
+       "rate": 0.002501,
+       "reference_rate_other_wards": 0.001134,
+       "p_value": 0.0857005
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 319.029,
+     "predicted_mean_daily_t": 315.663,
+     "observed_over_predicted": 1.0107,
+     "z": 0.0927,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.463313,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.9051,
+     "ward_scale_log": 0.16203,
+     "max_z_date": "2026-07-23",
+     "p_value": 0.0514014,
+     "q_value": 0.632632,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W12",
+   "confidence_score": 0.9749,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 3757,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 3757,
+     "chi2": 13.1371,
+     "df": 8,
+     "p_value": 0.107217,
+     "q_value": 0.974893,
+     "flagged": false,
+     "d_star": 0.021141,
+     "mad": 0.005479,
+     "span_decades_p5_p95": 1.8333,
+     "first_digit_counts": {
+      "1": 1160,
+      "2": 597,
+      "3": 458,
+      "4": 390,
+      "5": 283,
+      "6": 276,
+      "7": 219,
+      "8": 190,
+      "9": 184
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 3757,
+       "round": 384,
+       "rate": 0.102209,
+       "reference_rate_other_wards": 0.100147,
+       "p_value": 0.34683
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 3667,
+       "round": 32,
+       "rate": 0.008726,
+       "reference_rate_other_wards": 0.010613,
+       "p_value": 0.8844
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1844,
+       "round": 1,
+       "rate": 0.000542,
+       "reference_rate_other_wards": 0.001187,
+       "p_value": 0.887808
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 297.68,
+     "predicted_mean_daily_t": 381.043,
+     "observed_over_predicted": 0.7812,
+     "z": -2.1588,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.981198,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.3025,
+     "ward_scale_log": 0.16639,
+     "max_z_date": "2026-07-16",
+     "p_value": 0.298293,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W13",
+   "confidence_score": 0.1147,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4378,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4378,
+     "chi2": 7.0131,
+     "df": 8,
+     "p_value": 0.535219,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.014872,
+     "mad": 0.003814,
+     "span_decades_p5_p95": 1.8379,
+     "first_digit_counts": {
+      "1": 1263,
+      "2": 764,
+      "3": 534,
+      "4": 433,
+      "5": 373,
+      "6": 308,
+      "7": 264,
+      "8": 239,
+      "9": 200
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4378,
+       "round": 438,
+       "rate": 0.100046,
+       "reference_rate_other_wards": 0.100204,
+       "p_value": 0.521383
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4254,
+       "round": 39,
+       "rate": 0.009168,
+       "reference_rate_other_wards": 0.010608,
+       "p_value": 0.836659
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2208,
+       "round": 0,
+       "rate": 0.0,
+       "reference_rate_other_wards": 0.001207,
+       "p_value": 1.0
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 357.91,
+     "predicted_mean_daily_t": 395.228,
+     "observed_over_predicted": 0.9056,
+     "z": -0.8673,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.804228,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 3.8849,
+     "ward_scale_log": 0.1587,
+     "max_z_date": "2026-07-13",
+     "p_value": 0.00143329,
+     "q_value": 0.114663,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W14",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4313,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4313,
+     "chi2": 9.1337,
+     "df": 8,
+     "p_value": 0.331141,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.012849,
+     "mad": 0.003721,
+     "span_decades_p5_p95": 1.8638,
+     "first_digit_counts": {
+      "1": 1310,
+      "2": 734,
+      "3": 514,
+      "4": 433,
+      "5": 325,
+      "6": 287,
+      "7": 286,
+      "8": 217,
+      "9": 207
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4313,
+       "round": 432,
+       "rate": 0.100162,
+       "reference_rate_other_wards": 0.100201,
+       "p_value": 0.511006
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4179,
+       "round": 47,
+       "rate": 0.011247,
+       "reference_rate_other_wards": 0.010545,
+       "p_value": 0.351604
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2141,
+       "round": 3,
+       "rate": 0.001401,
+       "reference_rate_other_wards": 0.001164,
+       "p_value": 0.459886
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 349.752,
+     "predicted_mean_daily_t": 347.044,
+     "observed_over_predicted": 1.0078,
+     "z": 0.068,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.473091,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.7704,
+     "ward_scale_log": 0.15923,
+     "max_z_date": "2026-07-10",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W15",
+   "confidence_score": 0.9749,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4241,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4241,
+     "chi2": 6.9994,
+     "df": 8,
+     "p_value": 0.536701,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.010932,
+     "mad": 0.003019,
+     "span_decades_p5_p95": 1.8591,
+     "first_digit_counts": {
+      "1": 1282,
+      "2": 769,
+      "3": 504,
+      "4": 406,
+      "5": 321,
+      "6": 286,
+      "7": 234,
+      "8": 218,
+      "9": 221
+     }
+    },
+    "roundness": {
+     "p_value": 0.140141,
+     "q_value": 0.974893,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4241,
+       "round": 458,
+       "rate": 0.107993,
+       "reference_rate_other_wards": 0.099969,
+       "p_value": 0.0467136
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4128,
+       "round": 45,
+       "rate": 0.010901,
+       "reference_rate_other_wards": 0.010555,
+       "p_value": 0.436318
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2119,
+       "round": 2,
+       "rate": 0.000944,
+       "reference_rate_other_wards": 0.001177,
+       "p_value": 0.713397
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 339.19,
+     "predicted_mean_daily_t": 363.321,
+     "observed_over_predicted": 0.9336,
+     "z": -0.6009,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.724179,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.4569,
+     "ward_scale_log": 0.16101,
+     "max_z_date": "2026-08-01",
+     "p_value": 0.196183,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W16",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 5451,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 5451,
+     "chi2": 5.5867,
+     "df": 8,
+     "p_value": 0.693417,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.009144,
+     "mad": 0.0027,
+     "span_decades_p5_p95": 1.8403,
+     "first_digit_counts": {
+      "1": 1667,
+      "2": 963,
+      "3": 691,
+      "4": 522,
+      "5": 401,
+      "6": 343,
+      "7": 330,
+      "8": 292,
+      "9": 242
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 5451,
+       "round": 543,
+       "rate": 0.099615,
+       "reference_rate_other_wards": 0.100222,
+       "p_value": 0.565148
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 5308,
+       "round": 48,
+       "rate": 0.009043,
+       "reference_rate_other_wards": 0.010623,
+       "p_value": 0.881551
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2782,
+       "round": 2,
+       "rate": 0.000719,
+       "reference_rate_other_wards": 0.001188,
+       "p_value": 0.84164
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 439.94,
+     "predicted_mean_daily_t": 448.323,
+     "observed_over_predicted": 0.9813,
+     "z": -0.165,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.56508,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.4729,
+     "ward_scale_log": 0.15123,
+     "max_z_date": "2026-07-26",
+     "p_value": 0.187607,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W17",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4665,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4665,
+     "chi2": 1.2849,
+     "df": 8,
+     "p_value": 0.995731,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.00635,
+     "mad": 0.001436,
+     "span_decades_p5_p95": 1.8396,
+     "first_digit_counts": {
+      "1": 1431,
+      "2": 822,
+      "3": 578,
+      "4": 455,
+      "5": 364,
+      "6": 311,
+      "7": 259,
+      "8": 233,
+      "9": 212
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4665,
+       "round": 459,
+       "rate": 0.098392,
+       "reference_rate_other_wards": 0.100259,
+       "p_value": 0.669152
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4562,
+       "round": 45,
+       "rate": 0.009864,
+       "reference_rate_other_wards": 0.010588,
+       "p_value": 0.701329
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2387,
+       "round": 0,
+       "rate": 0.0,
+       "reference_rate_other_wards": 0.00121,
+       "p_value": 1.0
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 381.932,
+     "predicted_mean_daily_t": 370.166,
+     "observed_over_predicted": 1.0318,
+     "z": 0.2736,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.392977,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.8485,
+     "ward_scale_log": 0.15591,
+     "max_z_date": "2026-08-02",
+     "p_value": 0.903406,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W18",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4136,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4136,
+     "chi2": 4.9153,
+     "df": 8,
+     "p_value": 0.76659,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.010089,
+     "mad": 0.002885,
+     "span_decades_p5_p95": 1.8504,
+     "first_digit_counts": {
+      "1": 1224,
+      "2": 706,
+      "3": 524,
+      "4": 394,
+      "5": 324,
+      "6": 297,
+      "7": 244,
+      "8": 214,
+      "9": 209
+     }
+    },
+    "roundness": {
+     "p_value": 0.325818,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4136,
+       "round": 421,
+       "rate": 0.101789,
+       "reference_rate_other_wards": 0.100154,
+       "p_value": 0.372608
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4026,
+       "round": 51,
+       "rate": 0.012668,
+       "reference_rate_other_wards": 0.010505,
+       "p_value": 0.108606
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2101,
+       "round": 3,
+       "rate": 0.001428,
+       "reference_rate_other_wards": 0.001163,
+       "p_value": 0.447634
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 336.107,
+     "predicted_mean_daily_t": 312.667,
+     "observed_over_predicted": 1.075,
+     "z": 0.6321,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.26565,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.367,
+     "ward_scale_log": 0.16115,
+     "max_z_date": "2026-07-21",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W19",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 1919,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 1919,
+     "chi2": 2.6112,
+     "df": 8,
+     "p_value": 0.956346,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.01084,
+     "mad": 0.003142,
+     "span_decades_p5_p95": 1.8624,
+     "first_digit_counts": {
+      "1": 575,
+      "2": 323,
+      "3": 238,
+      "4": 180,
+      "5": 157,
+      "6": 136,
+      "7": 117,
+      "8": 107,
+      "9": 86
+     }
+    },
+    "roundness": {
+     "p_value": 0.986913,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 1919,
+       "round": 196,
+       "rate": 0.102137,
+       "reference_rate_other_wards": 0.100174,
+       "p_value": 0.399184
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 1863,
+       "round": 19,
+       "rate": 0.010199,
+       "reference_rate_other_wards": 0.01057,
+       "p_value": 0.593136
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1004,
+       "round": 2,
+       "rate": 0.001992,
+       "reference_rate_other_wards": 0.00116,
+       "p_value": 0.328971
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 160.79,
+     "predicted_mean_daily_t": 148.804,
+     "observed_over_predicted": 1.0806,
+     "z": 0.6774,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.251239,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.3034,
+     "ward_scale_log": 0.20628,
+     "max_z_date": "2026-07-07",
+     "p_value": 0.297617,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W20",
+   "confidence_score": 0.6326,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2352,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2352,
+     "chi2": 7.8321,
+     "df": 8,
+     "p_value": 0.450036,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.017926,
+     "mad": 0.005303,
+     "span_decades_p5_p95": 1.8643,
+     "first_digit_counts": {
+      "1": 689,
+      "2": 392,
+      "3": 311,
+      "4": 233,
+      "5": 178,
+      "6": 180,
+      "7": 131,
+      "8": 119,
+      "9": 119
+     }
+    },
+    "roundness": {
+     "p_value": 0.0378508,
+     "q_value": 0.632632,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2352,
+       "round": 269,
+       "rate": 0.114371,
+       "reference_rate_other_wards": 0.09997,
+       "p_value": 0.0126169
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2292,
+       "round": 29,
+       "rate": 0.012653,
+       "reference_rate_other_wards": 0.010531,
+       "p_value": 0.186597
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1152,
+       "round": 0,
+       "rate": 0.0,
+       "reference_rate_other_wards": 0.001189,
+       "p_value": 1.0
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 190.208,
+     "predicted_mean_daily_t": 179.699,
+     "observed_over_predicted": 1.0585,
+     "z": 0.497,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.311116,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.444,
+     "ward_scale_log": 0.19314,
+     "max_z_date": "2026-07-23",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W21",
+   "confidence_score": 0.9749,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 6556,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 6556,
+     "chi2": 7.7746,
+     "df": 8,
+     "p_value": 0.455794,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.011822,
+     "mad": 0.003416,
+     "span_decades_p5_p95": 1.8326,
+     "first_digit_counts": {
+      "1": 1926,
+      "2": 1200,
+      "3": 827,
+      "4": 621,
+      "5": 548,
+      "6": 418,
+      "7": 383,
+      "8": 351,
+      "9": 282
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 6556,
+       "round": 636,
+       "rate": 0.09701,
+       "reference_rate_other_wards": 0.100348,
+       "p_value": 0.81591
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 6396,
+       "round": 66,
+       "rate": 0.010319,
+       "reference_rate_other_wards": 0.010577,
+       "p_value": 0.595642
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 3239,
+       "round": 4,
+       "rate": 0.001235,
+       "reference_rate_other_wards": 0.001168,
+       "p_value": 0.528659
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 518.462,
+     "predicted_mean_daily_t": 454.887,
+     "observed_over_predicted": 1.1398,
+     "z": 1.1439,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.130112,
+     "q_value": 0.974893,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.11,
+     "ward_scale_log": 0.14554,
+     "max_z_date": "2026-07-14",
+     "p_value": 0.487994,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W22",
+   "confidence_score": 0.6326,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2611,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2611,
+     "chi2": 15.8986,
+     "df": 8,
+     "p_value": 0.0438544,
+     "q_value": 0.632632,
+     "flagged": false,
+     "d_star": 0.0242,
+     "mad": 0.00725,
+     "span_decades_p5_p95": 1.8494,
+     "first_digit_counts": {
+      "1": 754,
+      "2": 485,
+      "3": 351,
+      "4": 243,
+      "5": 170,
+      "6": 178,
+      "7": 145,
+      "8": 149,
+      "9": 136
+     }
+    },
+    "roundness": {
+     "p_value": 0.709209,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2611,
+       "round": 256,
+       "rate": 0.098047,
+       "reference_rate_other_wards": 0.100238,
+       "p_value": 0.65374
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2547,
+       "round": 31,
+       "rate": 0.012171,
+       "reference_rate_other_wards": 0.010536,
+       "p_value": 0.236403
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1301,
+       "round": 1,
+       "rate": 0.000769,
+       "reference_rate_other_wards": 0.001178,
+       "p_value": 0.785114
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 214.072,
+     "predicted_mean_daily_t": 190.372,
+     "observed_over_predicted": 1.1245,
+     "z": 1.026,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.155874,
+     "q_value": 0.997592,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.3762,
+     "ward_scale_log": 0.18521,
+     "max_z_date": "2026-07-26",
+     "p_value": 0.244907,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W23",
+   "confidence_score": 0.6326,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 3932,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 3932,
+     "chi2": 8.1567,
+     "df": 8,
+     "p_value": 0.418315,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.018456,
+     "mad": 0.004757,
+     "span_decades_p5_p95": 1.8714,
+     "first_digit_counts": {
+      "1": 1246,
+      "2": 675,
+      "3": 472,
+      "4": 401,
+      "5": 298,
+      "6": 243,
+      "7": 219,
+      "8": 203,
+      "9": 175
+     }
+    },
+    "roundness": {
+     "p_value": 0.129094,
+     "q_value": 0.974893,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 3932,
+       "round": 398,
+       "rate": 0.101221,
+       "reference_rate_other_wards": 0.100172,
+       "p_value": 0.422407
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 3833,
+       "round": 52,
+       "rate": 0.013566,
+       "reference_rate_other_wards": 0.010483,
+       "p_value": 0.0430312
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2032,
+       "round": 4,
+       "rate": 0.001969,
+       "reference_rate_other_wards": 0.001148,
+       "p_value": 0.21503
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 332.015,
+     "predicted_mean_daily_t": 270.365,
+     "observed_over_predicted": 1.228,
+     "z": 1.7961,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.0404371,
+     "q_value": 0.632632,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.6263,
+     "ward_scale_log": 0.16535,
+     "max_z_date": "2026-07-27",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W24",
+   "confidence_score": 0.9749,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 1485,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 1485,
+     "chi2": 9.4035,
+     "df": 8,
+     "p_value": 0.309407,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.021512,
+     "mad": 0.006493,
+     "span_decades_p5_p95": 1.8041,
+     "first_digit_counts": {
+      "1": 441,
+      "2": 272,
+      "3": 195,
+      "4": 139,
+      "5": 141,
+      "6": 94,
+      "7": 76,
+      "8": 65,
+      "9": 62
+     }
+    },
+    "roundness": {
+     "p_value": 0.647501,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 1485,
+       "round": 134,
+       "rate": 0.090236,
+       "reference_rate_other_wards": 0.100301,
+       "p_value": 0.909558
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 1456,
+       "round": 11,
+       "rate": 0.007555,
+       "reference_rate_other_wards": 0.010596,
+       "p_value": 0.901363
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 742,
+       "round": 2,
+       "rate": 0.002695,
+       "reference_rate_other_wards": 0.001155,
+       "p_value": 0.215834
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 117.74,
+     "predicted_mean_daily_t": 107.807,
+     "observed_over_predicted": 1.0921,
+     "z": 0.7707,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.22296,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.5872,
+     "ward_scale_log": 0.22577,
+     "max_z_date": "2026-07-28",
+     "p_value": 0.13545,
+     "q_value": 0.974893,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W25",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4902,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4902,
+     "chi2": 4.1437,
+     "df": 8,
+     "p_value": 0.843936,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.008175,
+     "mad": 0.002328,
+     "span_decades_p5_p95": 1.8441,
+     "first_digit_counts": {
+      "1": 1472,
+      "2": 844,
+      "3": 630,
+      "4": 452,
+      "5": 391,
+      "6": 325,
+      "7": 282,
+      "8": 267,
+      "9": 239
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4902,
+       "round": 497,
+       "rate": 0.101387,
+       "reference_rate_other_wards": 0.100159,
+       "p_value": 0.39627
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4761,
+       "round": 53,
+       "rate": 0.011132,
+       "reference_rate_other_wards": 0.010546,
+       "p_value": 0.368165
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2422,
+       "round": 3,
+       "rate": 0.001239,
+       "reference_rate_other_wards": 0.001169,
+       "p_value": 0.542409
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 383.841,
+     "predicted_mean_daily_t": 377.227,
+     "observed_over_predicted": 1.0175,
+     "z": 0.152,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.440021,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.3566,
+     "ward_scale_log": 0.15459,
+     "max_z_date": "2026-07-08",
+     "p_value": 0.25822,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W26",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 1691,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 1691,
+     "chi2": 9.4915,
+     "df": 8,
+     "p_value": 0.302546,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.030258,
+     "mad": 0.007409,
+     "span_decades_p5_p95": 1.8582,
+     "first_digit_counts": {
+      "1": 468,
+      "2": 325,
+      "3": 208,
+      "4": 165,
+      "5": 140,
+      "6": 125,
+      "7": 86,
+      "8": 91,
+      "9": 83
+     }
+    },
+    "roundness": {
+     "p_value": 0.801687,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 1691,
+       "round": 158,
+       "rate": 0.093436,
+       "reference_rate_other_wards": 0.100278,
+       "p_value": 0.834467
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 1644,
+       "round": 16,
+       "rate": 0.009732,
+       "reference_rate_other_wards": 0.010575,
+       "p_value": 0.663507
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 861,
+       "round": 2,
+       "rate": 0.002323,
+       "reference_rate_other_wards": 0.001157,
+       "p_value": 0.267229
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 141.713,
+     "predicted_mean_daily_t": 146.431,
+     "observed_over_predicted": 0.9678,
+     "z": -0.2864,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.611881,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.844,
+     "ward_scale_log": 0.21407,
+     "max_z_date": "2026-07-16",
+     "p_value": 0.912528,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W27",
+   "confidence_score": 0.0,
+   "flagged": true,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 10057,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 10057,
+     "chi2": 17.2881,
+     "df": 8,
+     "p_value": 0.0272448,
+     "q_value": 0.632632,
+     "flagged": false,
+     "d_star": 0.013221,
+     "mad": 0.00369,
+     "span_decades_p5_p95": 1.8364,
+     "first_digit_counts": {
+      "1": 2962,
+      "2": 1754,
+      "3": 1337,
+      "4": 956,
+      "5": 873,
+      "6": 641,
+      "7": 568,
+      "8": 496,
+      "9": 470
+     }
+    },
+    "roundness": {
+     "p_value": 0.434536,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 10057,
+       "round": 1039,
+       "rate": 0.103311,
+       "reference_rate_other_wards": 0.099972,
+       "p_value": 0.144845
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 9824,
+       "round": 102,
+       "rate": 0.010383,
+       "reference_rate_other_wards": 0.010579,
+       "p_value": 0.587305
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 5246,
+       "round": 3,
+       "rate": 0.000572,
+       "reference_rate_other_wards": 0.001216,
+       "p_value": 0.950095
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 841.308,
+     "predicted_mean_daily_t": 776.667,
+     "observed_over_predicted": 1.0832,
+     "z": 0.6991,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.244505,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 8.3263,
+     "ward_scale_log": 0.13556,
+     "max_z_date": "2026-08-02",
+     "p_value": 1.16743e-15,
+     "q_value": 1.8679e-13,
+     "flagged": true
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W28",
+   "confidence_score": 0.9421,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2407,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2407,
+     "chi2": 2.8587,
+     "df": 8,
+     "p_value": 0.942909,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.009861,
+     "mad": 0.00286,
+     "span_decades_p5_p95": 1.8361,
+     "first_digit_counts": {
+      "1": 729,
+      "2": 428,
+      "3": 310,
+      "4": 215,
+      "5": 195,
+      "6": 165,
+      "7": 131,
+      "8": 119,
+      "9": 115
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2407,
+       "round": 247,
+       "rate": 0.102617,
+       "reference_rate_other_wards": 0.10016,
+       "p_value": 0.355063
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2348,
+       "round": 26,
+       "rate": 0.011073,
+       "reference_rate_other_wards": 0.010557,
+       "p_value": 0.431512
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1224,
+       "round": 2,
+       "rate": 0.001634,
+       "reference_rate_other_wards": 0.001163,
+       "p_value": 0.420852
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 192.145,
+     "predicted_mean_daily_t": 164.387,
+     "observed_over_predicted": 1.1689,
+     "z": 1.3643,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.0904634,
+     "q_value": 0.942065,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.1968,
+     "ward_scale_log": 0.18969,
+     "max_z_date": "2026-07-29",
+     "p_value": 0.39248,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W29",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2098,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2098,
+     "chi2": 5.7524,
+     "df": 8,
+     "p_value": 0.674945,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.019057,
+     "mad": 0.005318,
+     "span_decades_p5_p95": 1.8582,
+     "first_digit_counts": {
+      "1": 656,
+      "2": 345,
+      "3": 272,
+      "4": 188,
+      "5": 172,
+      "6": 139,
+      "7": 130,
+      "8": 109,
+      "9": 87
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2098,
+       "round": 204,
+       "rate": 0.097235,
+       "reference_rate_other_wards": 0.100242,
+       "p_value": 0.686099
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2031,
+       "round": 16,
+       "rate": 0.007878,
+       "reference_rate_other_wards": 0.010604,
+       "p_value": 0.908608
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1027,
+       "round": 1,
+       "rate": 0.000974,
+       "reference_rate_other_wards": 0.001174,
+       "p_value": 0.702262
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 166.65,
+     "predicted_mean_daily_t": 198.059,
+     "observed_over_predicted": 0.8414,
+     "z": -1.5098,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.930089,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.9472,
+     "ward_scale_log": 0.20209,
+     "max_z_date": "2026-07-13",
+     "p_value": 0.721193,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W30",
+   "confidence_score": 0.6326,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2522,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2522,
+     "chi2": 10.4777,
+     "df": 8,
+     "p_value": 0.233087,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.01851,
+     "mad": 0.005396,
+     "span_decades_p5_p95": 1.8342,
+     "first_digit_counts": {
+      "1": 757,
+      "2": 419,
+      "3": 321,
+      "4": 271,
+      "5": 180,
+      "6": 163,
+      "7": 166,
+      "8": 138,
+      "9": 107
+     }
+    },
+    "roundness": {
+     "p_value": 0.403921,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2522,
+       "round": 267,
+       "rate": 0.105868,
+       "reference_rate_other_wards": 0.100101,
+       "p_value": 0.177696
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2454,
+       "round": 32,
+       "rate": 0.01304,
+       "reference_rate_other_wards": 0.010522,
+       "p_value": 0.13464
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1281,
+       "round": 1,
+       "rate": 0.000781,
+       "reference_rate_other_wards": 0.001178,
+       "p_value": 0.779928
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 207.755,
+     "predicted_mean_daily_t": 166.467,
+     "observed_over_predicted": 1.248,
+     "z": 1.9374,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.0302889,
+     "q_value": 0.632632,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.1935,
+     "ward_scale_log": 0.18687,
+     "max_z_date": "2026-07-20",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W31",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 1399,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 1399,
+     "chi2": 3.9166,
+     "df": 8,
+     "p_value": 0.86457,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.018909,
+     "mad": 0.005179,
+     "span_decades_p5_p95": 1.8449,
+     "first_digit_counts": {
+      "1": 434,
+      "2": 260,
+      "3": 157,
+      "4": 132,
+      "5": 115,
+      "6": 89,
+      "7": 83,
+      "8": 70,
+      "9": 59
+     }
+    },
+    "roundness": {
+     "p_value": 0.406963,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 1399,
+       "round": 153,
+       "rate": 0.109364,
+       "reference_rate_other_wards": 0.100112,
+       "p_value": 0.135654
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 1365,
+       "round": 16,
+       "rate": 0.011722,
+       "reference_rate_other_wards": 0.010554,
+       "p_value": 0.372267
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 745,
+       "round": 0,
+       "rate": 0.0,
+       "reference_rate_other_wards": 0.001183,
+       "p_value": 1.0
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 117.646,
+     "predicted_mean_daily_t": 122.311,
+     "observed_over_predicted": 0.9619,
+     "z": -0.34,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.632098,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.7591,
+     "ward_scale_log": 0.23005,
+     "max_z_date": "2026-07-20",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W32",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4123,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4123,
+     "chi2": 6.4676,
+     "df": 8,
+     "p_value": 0.595006,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.015318,
+     "mad": 0.003866,
+     "span_decades_p5_p95": 1.8278,
+     "first_digit_counts": {
+      "1": 1186,
+      "2": 744,
+      "3": 527,
+      "4": 389,
+      "5": 335,
+      "6": 270,
+      "7": 243,
+      "8": 233,
+      "9": 196
+     }
+    },
+    "roundness": {
+     "p_value": 0.91597,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4123,
+       "round": 411,
+       "rate": 0.099685,
+       "reference_rate_other_wards": 0.100215,
+       "p_value": 0.552315
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4010,
+       "round": 46,
+       "rate": 0.011471,
+       "reference_rate_other_wards": 0.010539,
+       "p_value": 0.305323
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2022,
+       "round": 1,
+       "rate": 0.000495,
+       "reference_rate_other_wards": 0.00119,
+       "p_value": 0.909431
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 329.977,
+     "predicted_mean_daily_t": 338.832,
+     "observed_over_predicted": 0.9739,
+     "z": -0.2316,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.590903,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.0562,
+     "ward_scale_log": 0.16188,
+     "max_z_date": "2026-07-07",
+     "p_value": 0.556704,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W33",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2628,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2628,
+     "chi2": 5.0609,
+     "df": 8,
+     "p_value": 0.751052,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.016648,
+     "mad": 0.004026,
+     "span_decades_p5_p95": 1.842,
+     "first_digit_counts": {
+      "1": 823,
+      "2": 472,
+      "3": 301,
+      "4": 253,
+      "5": 209,
+      "6": 168,
+      "7": 142,
+      "8": 140,
+      "9": 120
+     }
+    },
+    "roundness": {
+     "p_value": 0.950181,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2628,
+       "round": 271,
+       "rate": 0.10312,
+       "reference_rate_other_wards": 0.100147,
+       "p_value": 0.316727
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2562,
+       "round": 24,
+       "rate": 0.009368,
+       "reference_rate_other_wards": 0.010587,
+       "p_value": 0.751679
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1325,
+       "round": 1,
+       "rate": 0.000755,
+       "reference_rate_other_wards": 0.001178,
+       "p_value": 0.791177
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 210.415,
+     "predicted_mean_daily_t": 240.993,
+     "observed_over_predicted": 0.8731,
+     "z": -1.1865,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.878395,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.912,
+     "ward_scale_log": 0.18553,
+     "max_z_date": "2026-07-26",
+     "p_value": 0.782246,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W34",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 6946,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 6946,
+     "chi2": 4.0233,
+     "df": 8,
+     "p_value": 0.855012,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.007512,
+     "mad": 0.002087,
+     "span_decades_p5_p95": 1.8263,
+     "first_digit_counts": {
+      "1": 2053,
+      "2": 1213,
+      "3": 879,
+      "4": 656,
+      "5": 557,
+      "6": 470,
+      "7": 407,
+      "8": 383,
+      "9": 328
+     }
+    },
+    "roundness": {
+     "p_value": 0.326896,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 6946,
+       "round": 651,
+       "rate": 0.093723,
+       "reference_rate_other_wards": 0.100519,
+       "p_value": 0.969578
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 6777,
+       "round": 70,
+       "rate": 0.010329,
+       "reference_rate_other_wards": 0.010577,
+       "p_value": 0.594313
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 3444,
+       "round": 7,
+       "rate": 0.002033,
+       "reference_rate_other_wards": 0.001129,
+       "p_value": 0.108965
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 551.394,
+     "predicted_mean_daily_t": 547.647,
+     "observed_over_predicted": 1.0068,
+     "z": 0.0596,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.476389,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.881,
+     "ward_scale_log": 0.14342,
+     "max_z_date": "2026-07-06",
+     "p_value": 0.839614,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W35",
+   "confidence_score": 0.9749,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 3307,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 3307,
+     "chi2": 12.5251,
+     "df": 8,
+     "p_value": 0.129267,
+     "q_value": 0.974893,
+     "flagged": false,
+     "d_star": 0.020191,
+     "mad": 0.00562,
+     "span_decades_p5_p95": 1.8238,
+     "first_digit_counts": {
+      "1": 946,
+      "2": 592,
+      "3": 412,
+      "4": 348,
+      "5": 253,
+      "6": 248,
+      "7": 177,
+      "8": 189,
+      "9": 142
+     }
+    },
+    "roundness": {
+     "p_value": 0.828853,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 3307,
+       "round": 324,
+       "rate": 0.097974,
+       "reference_rate_other_wards": 0.100251,
+       "p_value": 0.67527
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 3236,
+       "round": 38,
+       "rate": 0.011743,
+       "reference_rate_other_wards": 0.010538,
+       "p_value": 0.276284
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1652,
+       "round": 1,
+       "rate": 0.000605,
+       "reference_rate_other_wards": 0.001184,
+       "p_value": 0.858745
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 267.307,
+     "predicted_mean_daily_t": 273.143,
+     "observed_over_predicted": 0.9786,
+     "z": -0.1889,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.574367,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.3205,
+     "ward_scale_log": 0.1729,
+     "max_z_date": "2026-07-23",
+     "p_value": 0.284415,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W36",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 1833,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 1833,
+     "chi2": 8.1685,
+     "df": 8,
+     "p_value": 0.417186,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.018203,
+     "mad": 0.005619,
+     "span_decades_p5_p95": 1.8663,
+     "first_digit_counts": {
+      "1": 546,
+      "2": 308,
+      "3": 221,
+      "4": 192,
+      "5": 163,
+      "6": 113,
+      "7": 106,
+      "8": 86,
+      "9": 98
+     }
+    },
+    "roundness": {
+     "p_value": 0.887449,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 1.0,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 1833,
+       "round": 180,
+       "rate": 0.0982,
+       "reference_rate_other_wards": 0.100225,
+       "p_value": 0.624366
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 1776,
+       "round": 14,
+       "rate": 0.007883,
+       "reference_rate_other_wards": 0.010599,
+       "p_value": 0.895011
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 927,
+       "round": 2,
+       "rate": 0.002157,
+       "reference_rate_other_wards": 0.001158,
+       "p_value": 0.295816
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 148.594,
+     "predicted_mean_daily_t": 173.336,
+     "observed_over_predicted": 0.8573,
+     "z": -1.3467,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.906754,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.7007,
+     "ward_scale_log": 0.20971,
+     "max_z_date": "2026-07-06",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W37",
+   "confidence_score": 0.6326,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 1143,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 1143,
+     "chi2": 17.4458,
+     "df": 8,
+     "p_value": 0.0257878,
+     "q_value": 0.632632,
+     "flagged": false,
+     "d_star": 0.039574,
+     "mad": 0.011203,
+     "span_decades_p5_p95": 1.8484,
+     "first_digit_counts": {
+      "1": 313,
+      "2": 214,
+      "3": 140,
+      "4": 98,
+      "5": 82,
+      "6": 101,
+      "7": 79,
+      "8": 56,
+      "9": 60
+     }
+    },
+    "roundness": {
+     "p_value": 0.606224,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 1143,
+       "round": 119,
+       "rate": 0.104112,
+       "reference_rate_other_wards": 0.100169,
+       "p_value": 0.343221
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 1110,
+       "round": 15,
+       "rate": 0.013514,
+       "reference_rate_other_wards": 0.010542,
+       "p_value": 0.202075
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 560,
+       "round": 1,
+       "rate": 0.001786,
+       "reference_rate_other_wards": 0.001166,
+       "p_value": 0.48239
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 96.107,
+     "predicted_mean_daily_t": 103.354,
+     "observed_over_predicted": 0.9299,
+     "z": -0.6356,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.735477,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.367,
+     "ward_scale_log": 0.24647,
+     "max_z_date": "2026-07-10",
+     "p_value": 0.25109,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W38",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2373,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2373,
+     "chi2": 7.2152,
+     "df": 8,
+     "p_value": 0.513606,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.017584,
+     "mad": 0.004777,
+     "span_decades_p5_p95": 1.8493,
+     "first_digit_counts": {
+      "1": 718,
+      "2": 392,
+      "3": 323,
+      "4": 235,
+      "5": 183,
+      "6": 144,
+      "7": 151,
+      "8": 116,
+      "9": 111
+     }
+    },
+    "roundness": {
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2373,
+       "round": 234,
+       "rate": 0.098609,
+       "reference_rate_other_wards": 0.100226,
+       "p_value": 0.612723
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2310,
+       "round": 21,
+       "rate": 0.009091,
+       "reference_rate_other_wards": 0.010589,
+       "p_value": 0.785227
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1183,
+       "round": 0,
+       "rate": 0.0,
+       "reference_rate_other_wards": 0.00119,
+       "p_value": 1.0
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 187.197,
+     "predicted_mean_daily_t": 182.841,
+     "observed_over_predicted": 1.0238,
+     "z": 0.2059,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.41903,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.1096,
+     "ward_scale_log": 0.1908,
+     "max_z_date": "2026-07-11",
+     "p_value": 1.0,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W39",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 4284,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 4284,
+     "chi2": 3.6143,
+     "df": 8,
+     "p_value": 0.890143,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.009574,
+     "mad": 0.002809,
+     "span_decades_p5_p95": 1.8415,
+     "first_digit_counts": {
+      "1": 1272,
+      "2": 732,
+      "3": 556,
+      "4": 427,
+      "5": 354,
+      "6": 288,
+      "7": 254,
+      "8": 206,
+      "9": 195
+     }
+    },
+    "roundness": {
+     "p_value": 0.305904,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.1,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 4284,
+       "round": 417,
+       "rate": 0.097339,
+       "reference_rate_other_wards": 0.100285,
+       "p_value": 0.743763
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 4178,
+       "round": 53,
+       "rate": 0.012685,
+       "reference_rate_other_wards": 0.010502,
+       "p_value": 0.101968
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 2187,
+       "round": 4,
+       "rate": 0.001829,
+       "reference_rate_other_wards": 0.001151,
+       "p_value": 0.253948
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 351.654,
+     "predicted_mean_daily_t": 412.671,
+     "observed_over_predicted": 0.8521,
+     "z": -1.3991,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.914827,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 1.8775,
+     "ward_scale_log": 0.15858,
+     "max_z_date": "2026-07-14",
+     "p_value": 0.846237,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  },
+  {
+   "ward_code": "SYN-W40",
+   "confidence_score": 1.0,
+   "flagged": false,
+   "metrics": {
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "n_entries": 2303,
+    "period_start": "2026-07-06",
+    "period_end": "2026-08-02",
+    "confidence_basis": "smallest BH-adjusted p-value (q) across checks; 1 = consistent, <= 0.01 = flagged. Not a probability that the data is genuine.",
+    "benford": {
+     "reference": "benford",
+     "applicable": true,
+     "n": 2303,
+     "chi2": 7.1918,
+     "df": 8,
+     "p_value": 0.516083,
+     "q_value": 1.0,
+     "flagged": false,
+     "d_star": 0.01989,
+     "mad": 0.005789,
+     "span_decades_p5_p95": 1.8181,
+     "first_digit_counts": {
+      "1": 671,
+      "2": 434,
+      "3": 307,
+      "4": 206,
+      "5": 194,
+      "6": 149,
+      "7": 126,
+      "8": 110,
+      "9": 106
+     }
+    },
+    "roundness": {
+     "p_value": 0.407513,
+     "q_value": 1.0,
+     "flagged": false,
+     "best_resolution_t": 0.01,
+     "by_resolution": [
+      {
+       "resolution_t": 0.01,
+       "eligible": 2303,
+       "round": 247,
+       "rate": 0.107251,
+       "reference_rate_other_wards": 0.100088,
+       "p_value": 0.135838
+      },
+      {
+       "resolution_t": 0.1,
+       "eligible": 2249,
+       "round": 29,
+       "rate": 0.012895,
+       "reference_rate_other_wards": 0.010528,
+       "p_value": 0.161688
+      },
+      {
+       "resolution_t": 1.0,
+       "eligible": 1158,
+       "round": 1,
+       "rate": 0.000864,
+       "reference_rate_other_wards": 0.001176,
+       "p_value": 0.745206
+      }
+     ]
+    },
+    "baseline": {
+     "observed_mean_daily_t": 178.038,
+     "predicted_mean_daily_t": 214.818,
+     "observed_over_predicted": 0.8288,
+     "z": -1.6421,
+     "residual_scale_log": 0.11436,
+     "t_df": 36,
+     "model": "log(mean daily t) ~ 1 + log(population) + income_proxy + sanitation_proxy; leave-one-ward-out Huber fit",
+     "direction": "upper",
+     "p_value": 0.945357,
+     "q_value": 1.0,
+     "flagged": false
+    },
+    "baseline_daily": {
+     "max_z": 2.4723,
+     "ward_scale_log": 0.19354,
+     "max_z_date": "2026-07-06",
+     "p_value": 0.187955,
+     "q_value": 1.0,
+     "flagged": false
+    }
+   }
+  }
+ ],
+ "flags": [
+  {
+   "ward_code": "SYN-W27",
+   "check_type": "baseline_daily",
+   "log_entry_ref": null,
+   "period_start": "2026-07-06",
+   "period_end": "2026-08-02",
+   "score": 1.8679e-13,
+   "details": {
+    "level": "ward",
+    "score_meaning": "BH-adjusted p-value (q); smaller = stronger evidence",
+    "alpha": 0.01,
+    "multiple_testing": "benjamini_hochberg_joint_over_all_ward_check_pairs",
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used.",
+    "max_z": 8.3263,
+    "ward_scale_log": 0.13556,
+    "max_z_date": "2026-08-02",
+    "p_value": 1.16743e-15,
+    "q_value": 1.8679e-13,
+    "flagged": true
+   }
+  },
+  {
+   "ward_code": "SYN-W27",
+   "check_type": "baseline_daily",
+   "log_entry_ref": null,
+   "period_start": "2026-08-02",
+   "period_end": "2026-08-02",
+   "score": 1.16743e-15,
+   "details": {
+    "level": "ward_day",
+    "localisation_hint": true,
+    "observed_total_t": 2344.1,
+    "expected_total_t": 758.188,
+    "z": 8.3263,
+    "score_meaning": "day p-value, Bonferroni-adjusted over the ward's days",
+    "data_notice": "SYNTHETIC DATA: every ward and log entry in this audit has data_origin='synthetic' (docs/decisions.md D5). No real MCD or other municipal data was used."
+   }
+  }
+ ]
+}

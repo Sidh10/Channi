@@ -1,0 +1,22 @@
+# Alternative local DB for machines where Docker Desktop works (default is `npm run db:start`, see docs/decisions.md D11).
+# Credentials below are local test values, not secrets.
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: chhanni-db
+    environment:
+      POSTGRES_USER: chhanni
+      POSTGRES_PASSWORD: chhanni_dev
+      POSTGRES_DB: chhanni
+    ports:
+      - "5432:5432"
+    volumes:
+      - chhanni-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chhanni -d chhanni"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  chhanni-pgdata:

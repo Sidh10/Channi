@@ -1,0 +1,2 @@
+# Only needed to extract tables from the CPCB PDFs in data/public/ (Phase 1 real-data check)
+pdfplumber==0.11.10

@@ -1,0 +1,1734 @@
+{
+ "data_label": "REAL PUBLIC DATA (CPCB, state-level, self-reported)",
+ "data_notice": "REAL public data: state-level figures self-reported by SPCBs/PCCs to CPCB, extracted from CPCB MSW annual reports 2019-20, 2020-21, 2021-22. Not ward-level, not MCD tonnage logs, not synthetic.",
+ "input_file": "data/public/cpcb_msw_statewise_tpd.csv",
+ "input_sha256": "cc67114b013aaa36aaecf62f69f053927bd85d7f9ada67b236dfa6884300997d",
+ "parse_status_counts": {
+  "clean": 395,
+  "excluded": 27,
+  "recovered_from_overlap": 2
+ },
+ "name_aliases_used_for_repeat_matching_only": {
+  "Andaman and": {
+   "canonical": "Andaman and Nicobar Islands",
+   "why": "name truncated in the 2019-20 PDF"
+  },
+  "Andaman and Nicobar": {
+   "canonical": "Andaman and Nicobar Islands",
+   "why": "name truncated in the 2021-22 PDF"
+  },
+  "NCihcaonbdairg aIsrlha nds": {
+   "canonical": "Chandigarh",
+   "why": "INFERRED: 'Chandigarh' interleaved with a wrapped 'Nicobar Islands' in the 2019-20 PDF text layer; values (450 TPD generated) are in Chandigarh's range in later years"
+  },
+  "DDDNH": {
+   "canonical": "Dadra and Nagar Haveli and Daman and Diu",
+   "why": "same UT, different abbreviation"
+  },
+  "DNH&DD": {
+   "canonical": "Dadra and Nagar Haveli and Daman and Diu",
+   "why": "same UT, different abbreviation"
+  }
+ },
+ "primary_analysis": {
+  "spec": {
+   "report_year": "2021-22",
+   "metric": "generated",
+   "digits": "first",
+   "reference": "Benford's Law (goodness of fit)",
+   "alpha": 0.01,
+   "parse_status": [
+    "clean",
+    "recovered_from_overlap"
+   ]
+  },
+  "reason": "One value per state/UT (closest to independent observations); 'generated' is the headline metric and the same kind of figure as the CRDT calibration; the 2021-22 'generated' column has no excluded cells and matches the report's TOTAL row exactly; 2021-22 is the most recent report with the most entities. Fixed before any digit statistic was computed. Expected power is low (n~36).",
+  "result": {
+   "label": "PRIMARY: 2021-22 generated",
+   "role": "primary (fixed a priori)",
+   "selection": {
+    "report_year": "2021-22",
+    "metric": "generated",
+    "digits": "first",
+    "reference": "Benford's Law (goodness of fit)",
+    "alpha": 0.01,
+    "parse_status": [
+     "clean",
+     "recovered_from_overlap"
+    ]
+   },
+   "note": "",
+   "n_cells": 36,
+   "n_used_positive": 36,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.3689782296184796,
+   "method": "monte_carlo_chi2",
+   "chi2": 4.020544577532114,
+   "df": 8,
+   "p_value": 0.8643067846607669,
+   "d_star": 0.09630488602611155,
+   "d_star_null_p95": 0.2122904528649823,
+   "d_star_null_p99": 0.2477613499210758,
+   "mad": 0.02980275181663307,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.601,
+   "observed_first_digit_counts": {
+    "1": 13,
+    "2": 7,
+    "3": 5,
+    "4": 2,
+    "5": 2,
+    "6": 3,
+    "7": 3,
+    "8": 1,
+    "9": 0
+   },
+   "expected_first_digit_counts": {
+    "1": 10.837,
+    "2": 6.339,
+    "3": 4.498,
+    "4": 3.489,
+    "5": 2.851,
+    "6": 2.41,
+    "7": 2.088,
+    "8": 1.841,
+    "9": 1.647
+   },
+   "reasons": [
+    "chi-square(8) = 4.02, p = 0.864 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 36 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 36, even leading digits that are completely uniform would be detected only 60% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  }
+ },
+ "all_tests": [
+  {
+   "label": "PRIMARY: 2021-22 generated",
+   "role": "primary (fixed a priori)",
+   "selection": {
+    "report_year": "2021-22",
+    "metric": "generated",
+    "digits": "first",
+    "reference": "Benford's Law (goodness of fit)",
+    "alpha": 0.01,
+    "parse_status": [
+     "clean",
+     "recovered_from_overlap"
+    ]
+   },
+   "note": "",
+   "n_cells": 36,
+   "n_used_positive": 36,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.3689782296184796,
+   "method": "monte_carlo_chi2",
+   "chi2": 4.020544577532114,
+   "df": 8,
+   "p_value": 0.8643067846607669,
+   "d_star": 0.09630488602611155,
+   "d_star_null_p95": 0.2122904528649823,
+   "d_star_null_p99": 0.2477613499210758,
+   "mad": 0.02980275181663307,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.601,
+   "observed_first_digit_counts": {
+    "1": 13,
+    "2": 7,
+    "3": 5,
+    "4": 2,
+    "5": 2,
+    "6": 3,
+    "7": 3,
+    "8": 1,
+    "9": 0
+   },
+   "expected_first_digit_counts": {
+    "1": 10.837,
+    "2": 6.339,
+    "3": 4.498,
+    "4": 3.489,
+    "5": 2.851,
+    "6": 2.41,
+    "7": 2.088,
+    "8": 1.841,
+    "9": 1.647
+   },
+   "reasons": [
+    "chi-square(8) = 4.02, p = 0.864 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 36 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 36, even leading digits that are completely uniform would be detected only 60% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2019-20 generated",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2019-20",
+    "metric": "generated"
+   },
+   "note": "",
+   "n_cells": 34,
+   "n_used_positive": 34,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.135359765562482,
+   "method": "monte_carlo_chi2",
+   "chi2": 3.3433168220804235,
+   "df": 8,
+   "p_value": 0.9159042047897605,
+   "d_star": 0.10455714675690829,
+   "d_star_null_p95": 0.21887086238900566,
+   "d_star_null_p99": 0.2581776568291606,
+   "mad": 0.027780369040700484,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.56675,
+   "observed_first_digit_counts": {
+    "1": 13,
+    "2": 5,
+    "3": 5,
+    "4": 4,
+    "5": 2,
+    "6": 2,
+    "7": 2,
+    "8": 0,
+    "9": 1
+   },
+   "expected_first_digit_counts": {
+    "1": 10.235,
+    "2": 5.987,
+    "3": 4.248,
+    "4": 3.295,
+    "5": 2.692,
+    "6": 2.276,
+    "7": 1.972,
+    "8": 1.739,
+    "9": 1.556
+   },
+   "reasons": [
+    "chi-square(8) = 3.34, p = 0.916 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 34 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 34, even leading digits that are completely uniform would be detected only 57% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2019-20 collected",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2019-20",
+    "metric": "collected"
+   },
+   "note": "",
+   "n_cells": 34,
+   "n_used_positive": 34,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.141010877001535,
+   "method": "monte_carlo_chi2",
+   "chi2": 4.4573021906601475,
+   "df": 8,
+   "p_value": 0.8211589420528973,
+   "d_star": 0.15670535233679467,
+   "d_star_null_p95": 0.21887086238900566,
+   "d_star_null_p99": 0.2581776568291606,
+   "mad": 0.03423202137987147,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.56675,
+   "observed_first_digit_counts": {
+    "1": 15,
+    "2": 4,
+    "3": 4,
+    "4": 3,
+    "5": 1,
+    "6": 2,
+    "7": 2,
+    "8": 1,
+    "9": 2
+   },
+   "expected_first_digit_counts": {
+    "1": 10.235,
+    "2": 5.987,
+    "3": 4.248,
+    "4": 3.295,
+    "5": 2.692,
+    "6": 2.276,
+    "7": 1.972,
+    "8": 1.739,
+    "9": 1.556
+   },
+   "reasons": [
+    "chi-square(8) = 4.46, p = 0.821 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 34 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 34, even leading digits that are completely uniform would be detected only 57% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2019-20 treated",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2019-20",
+    "metric": "treated"
+   },
+   "note": "",
+   "n_cells": 33,
+   "n_used_positive": 33,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.7455471187571865,
+   "method": "monte_carlo_chi2",
+   "chi2": 12.116100209733284,
+   "df": 8,
+   "p_value": 0.1432928353582321,
+   "d_star": 0.17149323301168462,
+   "d_star_null_p95": 0.22109300082656005,
+   "d_star_null_p99": 0.26280063008269616,
+   "mad": 0.04719893587948379,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.552,
+   "observed_first_digit_counts": {
+    "1": 11,
+    "2": 6,
+    "3": 0,
+    "4": 2,
+    "5": 4,
+    "6": 5,
+    "7": 2,
+    "8": 0,
+    "9": 3
+   },
+   "expected_first_digit_counts": {
+    "1": 9.934,
+    "2": 5.811,
+    "3": 4.123,
+    "4": 3.198,
+    "5": 2.613,
+    "6": 2.209,
+    "7": 1.914,
+    "8": 1.688,
+    "9": 1.51
+   },
+   "reasons": [
+    "chi-square(8) = 12.12, p = 0.143 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 33 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 33, even leading digits that are completely uniform would be detected only 55% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2019-20 treated [excl. 1 recovered cell]",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2019-20",
+    "metric": "treated",
+    "parse_status": [
+     "clean"
+    ]
+   },
+   "note": "re-run without cells recovered from PDF text overlap",
+   "n_cells": 32,
+   "n_used_positive": 32,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.748537824774257,
+   "method": "monte_carlo_chi2",
+   "chi2": 12.345963029017618,
+   "df": 8,
+   "p_value": 0.13419329033548322,
+   "d_star": 0.1728065594522166,
+   "d_star_null_p95": 0.2217183557095151,
+   "d_star_null_p99": 0.2641510727088319,
+   "mad": 0.04677806045860836,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.602,
+   "observed_first_digit_counts": {
+    "1": 10,
+    "2": 6,
+    "3": 0,
+    "4": 2,
+    "5": 4,
+    "6": 5,
+    "7": 2,
+    "8": 0,
+    "9": 3
+   },
+   "expected_first_digit_counts": {
+    "1": 9.633,
+    "2": 5.635,
+    "3": 3.998,
+    "4": 3.101,
+    "5": 2.534,
+    "6": 2.142,
+    "7": 1.856,
+    "8": 1.637,
+    "9": 1.464
+   },
+   "reasons": [
+    "chi-square(8) = 12.35, p = 0.134 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 32 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 32, even leading digits that are completely uniform would be detected only 60% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2019-20 landfilled",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2019-20",
+    "metric": "landfilled"
+   },
+   "note": "",
+   "n_cells": 26,
+   "n_used_positive": 25,
+   "n_excluded_nonpositive": 1,
+   "span_decades_p5_p95": 2.414893845620091,
+   "method": "monte_carlo_chi2",
+   "chi2": 10.013640416569423,
+   "df": 8,
+   "p_value": 0.25028748562571873,
+   "d_star": 0.16676181377971697,
+   "d_star_null_p95": 0.2553343417908977,
+   "d_star_null_p99": 0.3083796542886188,
+   "mad": 0.04504876486097348,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.41325,
+   "observed_first_digit_counts": {
+    "1": 6,
+    "2": 4,
+    "3": 3,
+    "4": 1,
+    "5": 3,
+    "6": 5,
+    "7": 1,
+    "8": 2,
+    "9": 0
+   },
+   "expected_first_digit_counts": {
+    "1": 7.526,
+    "2": 4.402,
+    "3": 3.123,
+    "4": 2.423,
+    "5": 1.98,
+    "6": 1.674,
+    "7": 1.45,
+    "8": 1.279,
+    "9": 1.144
+   },
+   "reasons": [
+    "chi-square(8) = 10.01, p = 0.25 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 25 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 25, even leading digits that are completely uniform would be detected only 41% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2019-20 landfilled [excl. 1 recovered cell]",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2019-20",
+    "metric": "landfilled",
+    "parse_status": [
+     "clean"
+    ]
+   },
+   "note": "re-run without cells recovered from PDF text overlap",
+   "n_cells": 25,
+   "n_used_positive": 24,
+   "n_excluded_nonpositive": 1,
+   "span_decades_p5_p95": 2.4624194421188275,
+   "method": "monte_carlo_chi2",
+   "chi2": 10.949991723769772,
+   "df": 8,
+   "p_value": 0.19539023048847556,
+   "d_star": 0.18616196283727385,
+   "d_star_null_p95": 0.2564798144509122,
+   "d_star_null_p99": 0.3029702663128907,
+   "mad": 0.04876608265172164,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.4205,
+   "observed_first_digit_counts": {
+    "1": 5,
+    "2": 4,
+    "3": 3,
+    "4": 1,
+    "5": 3,
+    "6": 5,
+    "7": 1,
+    "8": 2,
+    "9": 0
+   },
+   "expected_first_digit_counts": {
+    "1": 7.225,
+    "2": 4.226,
+    "3": 2.999,
+    "4": 2.326,
+    "5": 1.9,
+    "6": 1.607,
+    "7": 1.392,
+    "8": 1.228,
+    "9": 1.098
+   },
+   "reasons": [
+    "chi-square(8) = 10.95, p = 0.195 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 24 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 24, even leading digits that are completely uniform would be detected only 42% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2020-21 generated",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2020-21",
+    "metric": "generated"
+   },
+   "note": "",
+   "n_cells": 35,
+   "n_used_positive": 35,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.222809792501555,
+   "method": "monte_carlo_chi2",
+   "chi2": 2.152645243035409,
+   "df": 8,
+   "p_value": 0.9802509874506274,
+   "d_star": 0.07365186288964602,
+   "d_star_null_p95": 0.21718917572502383,
+   "d_star_null_p99": 0.25250747352344477,
+   "mad": 0.021372815277435578,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.58775,
+   "observed_first_digit_counts": {
+    "1": 11,
+    "2": 7,
+    "3": 6,
+    "4": 2,
+    "5": 3,
+    "6": 2,
+    "7": 1,
+    "8": 2,
+    "9": 1
+   },
+   "expected_first_digit_counts": {
+    "1": 10.536,
+    "2": 6.163,
+    "3": 4.373,
+    "4": 3.392,
+    "5": 2.771,
+    "6": 2.343,
+    "7": 2.03,
+    "8": 1.79,
+    "9": 1.602
+   },
+   "reasons": [
+    "chi-square(8) = 2.15, p = 0.98 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 35 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 35, even leading digits that are completely uniform would be detected only 59% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2020-21 collected",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2020-21",
+    "metric": "collected"
+   },
+   "note": "",
+   "n_cells": 35,
+   "n_used_positive": 35,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.23725033308546,
+   "method": "monte_carlo_chi2",
+   "chi2": 3.8581583496063887,
+   "df": 8,
+   "p_value": 0.8747562621868906,
+   "d_star": 0.10976076562648443,
+   "d_star_null_p95": 0.21718917572502383,
+   "d_star_null_p99": 0.25250747352344477,
+   "mad": 0.029836469302782127,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.58775,
+   "observed_first_digit_counts": {
+    "1": 13,
+    "2": 7,
+    "3": 2,
+    "4": 3,
+    "5": 2,
+    "6": 2,
+    "7": 2,
+    "8": 1,
+    "9": 3
+   },
+   "expected_first_digit_counts": {
+    "1": 10.536,
+    "2": 6.163,
+    "3": 4.373,
+    "4": 3.392,
+    "5": 2.771,
+    "6": 2.343,
+    "7": 2.03,
+    "8": 1.79,
+    "9": 1.602
+   },
+   "reasons": [
+    "chi-square(8) = 3.86, p = 0.875 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 35 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 35, even leading digits that are completely uniform would be detected only 59% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2020-21 treated",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2020-21",
+    "metric": "treated"
+   },
+   "note": "",
+   "n_cells": 33,
+   "n_used_positive": 33,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.638393399563134,
+   "method": "monte_carlo_chi2",
+   "chi2": 10.314507220939456,
+   "df": 8,
+   "p_value": 0.23783810809459527,
+   "d_star": 0.1454988459403369,
+   "d_star_null_p95": 0.22109300082656005,
+   "d_star_null_p99": 0.26280063008269616,
+   "mad": 0.04046492914547706,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.552,
+   "observed_first_digit_counts": {
+    "1": 10,
+    "2": 6,
+    "3": 2,
+    "4": 1,
+    "5": 3,
+    "6": 5,
+    "7": 4,
+    "8": 0,
+    "9": 2
+   },
+   "expected_first_digit_counts": {
+    "1": 9.934,
+    "2": 5.811,
+    "3": 4.123,
+    "4": 3.198,
+    "5": 2.613,
+    "6": 2.209,
+    "7": 1.914,
+    "8": 1.688,
+    "9": 1.51
+   },
+   "reasons": [
+    "chi-square(8) = 10.31, p = 0.238 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 33 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 33, even leading digits that are completely uniform would be detected only 55% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2020-21 landfilled",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2020-21",
+    "metric": "landfilled"
+   },
+   "note": "",
+   "n_cells": 30,
+   "n_used_positive": 26,
+   "n_excluded_nonpositive": 4,
+   "span_decades_p5_p95": 2.7212632061637643,
+   "method": "monte_carlo_chi2",
+   "chi2": 6.309785018006145,
+   "df": 8,
+   "p_value": 0.6141192940352982,
+   "d_star": 0.15595518930183233,
+   "d_star_null_p95": 0.252913552764653,
+   "d_star_null_p99": 0.2983252354071483,
+   "mad": 0.04722357830993397,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.42675,
+   "observed_first_digit_counts": {
+    "1": 6,
+    "2": 7,
+    "3": 2,
+    "4": 2,
+    "5": 3,
+    "6": 0,
+    "7": 3,
+    "8": 2,
+    "9": 1
+   },
+   "expected_first_digit_counts": {
+    "1": 7.827,
+    "2": 4.578,
+    "3": 3.248,
+    "4": 2.52,
+    "5": 2.059,
+    "6": 1.741,
+    "7": 1.508,
+    "8": 1.33,
+    "9": 1.19
+   },
+   "reasons": [
+    "chi-square(8) = 6.31, p = 0.614 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 26 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 26, even leading digits that are completely uniform would be detected only 43% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2021-22 collected",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2021-22",
+    "metric": "collected"
+   },
+   "note": "",
+   "n_cells": 34,
+   "n_used_positive": 34,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.4025792828685337,
+   "method": "monte_carlo_chi2",
+   "chi2": 10.213210822683699,
+   "df": 8,
+   "p_value": 0.2408379581020949,
+   "d_star": 0.20209944381623307,
+   "d_star_null_p95": 0.21887086238900566,
+   "d_star_null_p99": 0.2581776568291606,
+   "mad": 0.05404670626183165,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.56675,
+   "observed_first_digit_counts": {
+    "1": 16,
+    "2": 4,
+    "3": 5,
+    "4": 2,
+    "5": 1,
+    "6": 4,
+    "7": 2,
+    "8": 0,
+    "9": 0
+   },
+   "expected_first_digit_counts": {
+    "1": 10.235,
+    "2": 5.987,
+    "3": 4.248,
+    "4": 3.295,
+    "5": 2.692,
+    "6": 2.276,
+    "7": 1.972,
+    "8": 1.739,
+    "9": 1.556
+   },
+   "reasons": [
+    "chi-square(8) = 10.21, p = 0.241 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 34 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 34, even leading digits that are completely uniform would be detected only 57% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2021-22 treated",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2021-22",
+    "metric": "treated"
+   },
+   "note": "",
+   "n_cells": 35,
+   "n_used_positive": 35,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.680854019954377,
+   "method": "monte_carlo_chi2",
+   "chi2": 8.617159308454994,
+   "df": 8,
+   "p_value": 0.3647317634118294,
+   "d_star": 0.1452455304829324,
+   "d_star_null_p95": 0.21718917572502383,
+   "d_star_null_p99": 0.25250747352344477,
+   "mad": 0.04259908598900041,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.58775,
+   "observed_first_digit_counts": {
+    "1": 12,
+    "2": 7,
+    "3": 1,
+    "4": 1,
+    "5": 4,
+    "6": 2,
+    "7": 3,
+    "8": 4,
+    "9": 1
+   },
+   "expected_first_digit_counts": {
+    "1": 10.536,
+    "2": 6.163,
+    "3": 4.373,
+    "4": 3.392,
+    "5": 2.771,
+    "6": 2.343,
+    "7": 2.03,
+    "8": 1.79,
+    "9": 1.602
+   },
+   "reasons": [
+    "chi-square(8) = 8.62, p = 0.365 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 35 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 35, even leading digits that are completely uniform would be detected only 59% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2021-22 landfilled",
+   "role": "secondary (one year x metric)",
+   "selection": {
+    "report_year": "2021-22",
+    "metric": "landfilled"
+   },
+   "note": "",
+   "n_cells": 32,
+   "n_used_positive": 31,
+   "n_excluded_nonpositive": 1,
+   "span_decades_p5_p95": 2.7998381327508404,
+   "method": "monte_carlo_chi2",
+   "chi2": 1.8932757044566315,
+   "df": 8,
+   "p_value": 0.9855007249637519,
+   "d_star": 0.07512911636053246,
+   "d_star_null_p95": 0.2309702636400766,
+   "d_star_null_p99": 0.27381584680353094,
+   "mad": 0.022605605834028843,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.554,
+   "observed_first_digit_counts": {
+    "1": 8,
+    "2": 6,
+    "3": 3,
+    "4": 4,
+    "5": 2,
+    "6": 2,
+    "7": 3,
+    "8": 2,
+    "9": 1
+   },
+   "expected_first_digit_counts": {
+    "1": 9.332,
+    "2": 5.459,
+    "3": 3.873,
+    "4": 3.004,
+    "5": 2.455,
+    "6": 2.075,
+    "7": 1.798,
+    "8": 1.586,
+    "9": 1.418
+   },
+   "reasons": [
+    "chi-square(8) = 1.89, p = 0.986 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 31 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic.",
+    "low power: at n = 31, even leading digits that are completely uniform would be detected only 55% of the time at alpha = 0.01; a 'conforms' verdict here is weak evidence."
+   ]
+  },
+  {
+   "label": "2019-20 all metrics pooled",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "2019-20",
+    "metric": "all"
+   },
+   "note": "collected often equals generated; treated and landfilled are parts of collected",
+   "n_cells": 127,
+   "n_used_positive": 126,
+   "n_excluded_nonpositive": 1,
+   "span_decades_p5_p95": 2.6321788479204393,
+   "method": "asymptotic_chi2",
+   "chi2": 8.600770406651044,
+   "df": 8,
+   "p_value": 0.37708467249863803,
+   "d_star": 0.0845988344889016,
+   "d_star_null_p95": 0.11555904674851235,
+   "d_star_null_p99": 0.1353039497577181,
+   "mad": 0.022738349630044636,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.99975,
+   "observed_first_digit_counts": {
+    "1": 45,
+    "2": 19,
+    "3": 12,
+    "4": 10,
+    "5": 10,
+    "6": 14,
+    "7": 7,
+    "8": 3,
+    "9": 6
+   },
+   "expected_first_digit_counts": {
+    "1": 37.93,
+    "2": 22.187,
+    "3": 15.742,
+    "4": 12.211,
+    "5": 9.977,
+    "6": 8.435,
+    "7": 7.307,
+    "8": 6.445,
+    "9": 5.765
+   },
+   "reasons": [
+    "chi-square(8) = 8.60, p = 0.377 (asymptotic_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources)."
+   ]
+  },
+  {
+   "label": "2019-20 all metrics pooled [excl. 2 recovered cells]",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "2019-20",
+    "metric": "all",
+    "parse_status": [
+     "clean"
+    ]
+   },
+   "note": "re-run without cells recovered from PDF text overlap",
+   "n_cells": 125,
+   "n_used_positive": 124,
+   "n_excluded_nonpositive": 1,
+   "span_decades_p5_p95": 2.6321788479204393,
+   "method": "asymptotic_chi2",
+   "chi2": 8.056755859176258,
+   "df": 8,
+   "p_value": 0.4279457727959471,
+   "d_star": 0.07793740346565885,
+   "d_star_null_p95": 0.11499501773542126,
+   "d_star_null_p99": 0.1327409543619432,
+   "mad": 0.02128759011476899,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.9995,
+   "observed_first_digit_counts": {
+    "1": 43,
+    "2": 19,
+    "3": 12,
+    "4": 10,
+    "5": 10,
+    "6": 14,
+    "7": 7,
+    "8": 3,
+    "9": 6
+   },
+   "expected_first_digit_counts": {
+    "1": 37.328,
+    "2": 21.835,
+    "3": 15.492,
+    "4": 12.017,
+    "5": 9.818,
+    "6": 8.301,
+    "7": 7.191,
+    "8": 6.343,
+    "9": 5.674
+   },
+   "reasons": [
+    "chi-square(8) = 8.06, p = 0.428 (asymptotic_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources)."
+   ]
+  },
+  {
+   "label": "2020-21 all metrics pooled",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "2020-21",
+    "metric": "all"
+   },
+   "note": "collected often equals generated; treated and landfilled are parts of collected",
+   "n_cells": 133,
+   "n_used_positive": 129,
+   "n_excluded_nonpositive": 4,
+   "span_decades_p5_p95": 2.861719702155021,
+   "method": "asymptotic_chi2",
+   "chi2": 5.030896330130283,
+   "df": 8,
+   "p_value": 0.7542688431312414,
+   "d_star": 0.06158665841002846,
+   "d_star_null_p95": 0.11487662350798805,
+   "d_star_null_p99": 0.13490534642240165,
+   "mad": 0.017600627211407677,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 1.0,
+   "observed_first_digit_counts": {
+    "1": 40,
+    "2": 27,
+    "3": 12,
+    "4": 8,
+    "5": 11,
+    "6": 9,
+    "7": 10,
+    "8": 5,
+    "9": 7
+   },
+   "expected_first_digit_counts": {
+    "1": 38.833,
+    "2": 22.716,
+    "3": 16.117,
+    "4": 12.501,
+    "5": 10.214,
+    "6": 8.636,
+    "7": 7.481,
+    "8": 6.599,
+    "9": 5.903
+   },
+   "reasons": [
+    "chi-square(8) = 5.03, p = 0.754 (asymptotic_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources)."
+   ]
+  },
+  {
+   "label": "2021-22 all metrics pooled",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "2021-22",
+    "metric": "all"
+   },
+   "note": "collected often equals generated; treated and landfilled are parts of collected",
+   "n_cells": 137,
+   "n_used_positive": 136,
+   "n_excluded_nonpositive": 1,
+   "span_decades_p5_p95": 2.8877266727661435,
+   "method": "asymptotic_chi2",
+   "chi2": 8.219006768872887,
+   "df": 8,
+   "p_value": 0.4123747146720522,
+   "d_star": 0.07952847168954878,
+   "d_star_null_p95": 0.11029026503424556,
+   "d_star_null_p99": 0.1295234405703969,
+   "mad": 0.02150833027214585,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 1.0,
+   "observed_first_digit_counts": {
+    "1": 49,
+    "2": 24,
+    "3": 14,
+    "4": 9,
+    "5": 9,
+    "6": 11,
+    "7": 11,
+    "8": 7,
+    "9": 2
+   },
+   "expected_first_digit_counts": {
+    "1": 40.94,
+    "2": 23.948,
+    "3": 16.992,
+    "4": 13.18,
+    "5": 10.769,
+    "6": 9.105,
+    "7": 7.887,
+    "8": 6.957,
+    "9": 6.223
+   },
+   "reasons": [
+    "chi-square(8) = 8.22, p = 0.412 (asymptotic_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources)."
+   ]
+  },
+  {
+   "label": "generated all years pooled",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "all",
+    "metric": "generated"
+   },
+   "note": "the same states repeat in every year",
+   "n_cells": 105,
+   "n_used_positive": 105,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.3031346263816324,
+   "method": "monte_carlo_chi2",
+   "chi2": 4.924754608659637,
+   "df": 8,
+   "p_value": 0.7714614269286536,
+   "d_star": 0.06974256020794868,
+   "d_star_null_p95": 0.12446448814477475,
+   "d_star_null_p99": 0.14587559026256497,
+   "mad": 0.018589843196960745,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.99625,
+   "observed_first_digit_counts": {
+    "1": 37,
+    "2": 19,
+    "3": 16,
+    "4": 8,
+    "5": 7,
+    "6": 7,
+    "7": 6,
+    "8": 3,
+    "9": 2
+   },
+   "expected_first_digit_counts": {
+    "1": 31.608,
+    "2": 18.49,
+    "3": 13.119,
+    "4": 10.176,
+    "5": 8.314,
+    "6": 7.029,
+    "7": 6.089,
+    "8": 5.371,
+    "9": 4.805
+   },
+   "reasons": [
+    "chi-square(8) = 4.92, p = 0.771 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 105 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic."
+   ]
+  },
+  {
+   "label": "collected all years pooled",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "all",
+    "metric": "collected"
+   },
+   "note": "the same states repeat in every year",
+   "n_cells": 103,
+   "n_used_positive": 103,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.295711042894733,
+   "method": "monte_carlo_chi2",
+   "chi2": 10.992850771967936,
+   "df": 8,
+   "p_value": 0.19784010799460028,
+   "d_star": 0.1374854906995988,
+   "d_star_null_p95": 0.12567790008561014,
+   "d_star_null_p99": 0.14442004363617264,
+   "mad": 0.03109428057865264,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.995,
+   "observed_first_digit_counts": {
+    "1": 44,
+    "2": 15,
+    "3": 11,
+    "4": 8,
+    "5": 4,
+    "6": 8,
+    "7": 6,
+    "8": 2,
+    "9": 5
+   },
+   "expected_first_digit_counts": {
+    "1": 31.006,
+    "2": 18.137,
+    "3": 12.869,
+    "4": 9.982,
+    "5": 8.156,
+    "6": 6.896,
+    "7": 5.973,
+    "8": 5.269,
+    "9": 4.713
+   },
+   "reasons": [
+    "chi-square(8) = 10.99, p = 0.198 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 103 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic."
+   ]
+  },
+  {
+   "label": "treated all years pooled",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "all",
+    "metric": "treated"
+   },
+   "note": "the same states repeat in every year",
+   "n_cells": 101,
+   "n_used_positive": 101,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.7012962262655544,
+   "method": "monte_carlo_chi2",
+   "chi2": 18.605779623491486,
+   "df": 8,
+   "p_value": 0.01894905254737263,
+   "d_star": 0.12953833249562574,
+   "d_star_null_p95": 0.12573944389790148,
+   "d_star_null_p99": 0.144762389223233,
+   "mad": 0.036464529105473056,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.99675,
+   "observed_first_digit_counts": {
+    "1": 33,
+    "2": 19,
+    "3": 3,
+    "4": 4,
+    "5": 11,
+    "6": 12,
+    "7": 9,
+    "8": 4,
+    "9": 6
+   },
+   "expected_first_digit_counts": {
+    "1": 30.404,
+    "2": 17.785,
+    "3": 12.619,
+    "4": 9.788,
+    "5": 7.997,
+    "6": 6.762,
+    "7": 5.857,
+    "8": 5.166,
+    "9": 4.622
+   },
+   "reasons": [
+    "chi-square(8) = 18.61, p = 0.0189 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 101 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic."
+   ]
+  },
+  {
+   "label": "treated all years pooled [excl. 1 recovered cell]",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "all",
+    "metric": "treated",
+    "parse_status": [
+     "clean"
+    ]
+   },
+   "note": "re-run without cells recovered from PDF text overlap",
+   "n_cells": 100,
+   "n_used_positive": 100,
+   "n_excluded_nonpositive": 0,
+   "span_decades_p5_p95": 2.7073073462967807,
+   "method": "monte_carlo_chi2",
+   "chi2": 18.642584158049615,
+   "df": 8,
+   "p_value": 0.01929903504824759,
+   "d_star": 0.1291810534794131,
+   "d_star_null_p95": 0.12532545590764155,
+   "d_star_null_p99": 0.1510974400339092,
+   "mad": 0.036222504903052816,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.99625,
+   "observed_first_digit_counts": {
+    "1": 32,
+    "2": 19,
+    "3": 3,
+    "4": 4,
+    "5": 11,
+    "6": 12,
+    "7": 9,
+    "8": 4,
+    "9": 6
+   },
+   "expected_first_digit_counts": {
+    "1": 30.103,
+    "2": 17.609,
+    "3": 12.494,
+    "4": 9.691,
+    "5": 7.918,
+    "6": 6.695,
+    "7": 5.799,
+    "8": 5.115,
+    "9": 4.576
+   },
+   "reasons": [
+    "chi-square(8) = 18.64, p = 0.0193 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 100 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic."
+   ]
+  },
+  {
+   "label": "landfilled all years pooled",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "all",
+    "metric": "landfilled"
+   },
+   "note": "the same states repeat in every year",
+   "n_cells": 88,
+   "n_used_positive": 82,
+   "n_excluded_nonpositive": 6,
+   "span_decades_p5_p95": 2.8344442535273697,
+   "method": "monte_carlo_chi2",
+   "chi2": 5.368013793746097,
+   "df": 8,
+   "p_value": 0.7155642217889105,
+   "d_star": 0.08350791510681725,
+   "d_star_null_p95": 0.14470794790328592,
+   "d_star_null_p99": 0.16806934024846126,
+   "mad": 0.02609260525464239,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.981,
+   "observed_first_digit_counts": {
+    "1": 20,
+    "2": 17,
+    "3": 8,
+    "4": 7,
+    "5": 8,
+    "6": 7,
+    "7": 7,
+    "8": 6,
+    "9": 2
+   },
+   "expected_first_digit_counts": {
+    "1": 24.684,
+    "2": 14.439,
+    "3": 10.245,
+    "4": 7.947,
+    "5": 6.493,
+    "6": 5.49,
+    "7": 4.755,
+    "8": 4.195,
+    "9": 3.752
+   },
+   "reasons": [
+    "chi-square(8) = 5.37, p = 0.716 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 82 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic."
+   ]
+  },
+  {
+   "label": "landfilled all years pooled [excl. 1 recovered cell]",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "all",
+    "metric": "landfilled",
+    "parse_status": [
+     "clean"
+    ]
+   },
+   "note": "re-run without cells recovered from PDF text overlap",
+   "n_cells": 87,
+   "n_used_positive": 81,
+   "n_excluded_nonpositive": 6,
+   "span_decades_p5_p95": 2.839870683222209,
+   "method": "monte_carlo_chi2",
+   "chi2": 5.847184387488554,
+   "df": 8,
+   "p_value": 0.6669666516674166,
+   "d_star": 0.09100263667705467,
+   "d_star_null_p95": 0.13998937175012288,
+   "d_star_null_p99": 0.17054674422705285,
+   "mad": 0.027598175865904056,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 0.98425,
+   "observed_first_digit_counts": {
+    "1": 19,
+    "2": 17,
+    "3": 8,
+    "4": 7,
+    "5": 8,
+    "6": 7,
+    "7": 7,
+    "8": 6,
+    "9": 2
+   },
+   "expected_first_digit_counts": {
+    "1": 24.383,
+    "2": 14.263,
+    "3": 10.12,
+    "4": 7.85,
+    "5": 6.414,
+    "6": 5.423,
+    "7": 4.697,
+    "8": 4.143,
+    "9": 3.706
+   },
+   "reasons": [
+    "chi-square(8) = 5.85, p = 0.667 (monte_carlo_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources).",
+    "n = 81 is below 110, so some expected digit counts are < 5; the p-value is simulated (20000 multinomial draws from Benford at the same n), not asymptotic."
+   ]
+  },
+  {
+   "label": "everything pooled",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "all",
+    "metric": "all"
+   },
+   "note": "states repeat across years and metrics",
+   "n_cells": 397,
+   "n_used_positive": 391,
+   "n_excluded_nonpositive": 6,
+   "span_decades_p5_p95": 2.88561247516256,
+   "method": "asymptotic_chi2",
+   "chi2": 13.153087849217087,
+   "df": 8,
+   "p_value": 0.10668976737738116,
+   "d_star": 0.06180449581582115,
+   "d_star_null_p95": 0.06447670197715895,
+   "d_star_null_p99": 0.07695819810577659,
+   "mad": 0.017388203120640357,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 1.0,
+   "observed_first_digit_counts": {
+    "1": 134,
+    "2": 70,
+    "3": 38,
+    "4": 27,
+    "5": 30,
+    "6": 34,
+    "7": 28,
+    "8": 15,
+    "9": 15
+   },
+   "expected_first_digit_counts": {
+    "1": 117.703,
+    "2": 68.852,
+    "3": 48.851,
+    "4": 37.892,
+    "5": 30.96,
+    "6": 26.176,
+    "7": 22.675,
+    "8": 20.001,
+    "9": 17.891
+   },
+   "reasons": [
+    "chi-square(8) = 13.15, p = 0.107 (asymptotic_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources)."
+   ]
+  },
+  {
+   "label": "everything pooled [excl. 2 recovered cells]",
+   "role": "descriptive (pooled; NOT independent)",
+   "selection": {
+    "report_year": "all",
+    "metric": "all",
+    "parse_status": [
+     "clean"
+    ]
+   },
+   "note": "re-run without cells recovered from PDF text overlap",
+   "n_cells": 395,
+   "n_used_positive": 389,
+   "n_excluded_nonpositive": 6,
+   "span_decades_p5_p95": 2.886384175217157,
+   "method": "asymptotic_chi2",
+   "chi2": 12.687896150549626,
+   "df": 8,
+   "p_value": 0.12304885472854,
+   "d_star": 0.059559670262816736,
+   "d_star_null_p95": 0.06482864780848245,
+   "d_star_null_p99": 0.07639217859142676,
+   "mad": 0.017022943943686166,
+   "verdict": "conforms",
+   "power_vs_uniform_digits": 1.0,
+   "observed_first_digit_counts": {
+    "1": 132,
+    "2": 70,
+    "3": 38,
+    "4": 27,
+    "5": 30,
+    "6": 34,
+    "7": 28,
+    "8": 15,
+    "9": 15
+   },
+   "expected_first_digit_counts": {
+    "1": 117.101,
+    "2": 68.499,
+    "3": 48.601,
+    "4": 37.698,
+    "5": 30.802,
+    "6": 26.042,
+    "7": 22.559,
+    "8": 19.898,
+    "9": 17.8
+   },
+   "reasons": [
+    "chi-square(8) = 12.69, p = 0.123 (asymptotic_chi2) vs alpha = 0.01"
+   ],
+   "caveats": [
+    "'conforms' means no statistically significant deviation at alpha; it is not proof the data is genuine.",
+    "'does_not_conform' is a reason to inspect, not proof of fabrication: genuine data can deviate (e.g. caps, minimums, rounding by measuring equipment, narrow ranges, few distinct sources)."
+   ]
+  }
+ ],
+ "multiple_testing_note": "Only the primary test is interpreted at alpha = 0.01. Secondary and descriptive p-values are uncorrected and not independent of each other or of the primary.",
+ "not_run": {
+  "peer_reference": "no natural peer group; the question is conformity to Benford's Law itself",
+  "first_two_digits": "n far below 1146; power negligible"
+ },
+ "generated_vs_collected": {
+  "role": "descriptive",
+  "state_years_with_both": 102,
+  "collected_equals_generated_exactly": 20,
+  "collected_within_1pct_of_generated": 30
+ },
+ "exact_repeats_consecutive_years": {
+  "role": "descriptive note, NOT a Benford result",
+  "definition": "same state (harmonised name), same metric, consecutive report years, identical value_tpd; only cells with a usable value are compared",
+  "n_comparable_pairs": 255,
+  "n_exact_repeats": 9,
+  "n_exact_repeats_nonzero": 8,
+  "by_year_pair": {
+   "2019-20->2020-21": {
+    "comparable_state_metric_pairs": 126,
+    "exact_repeats": 5
+   },
+   "2020-21->2021-22": {
+    "comparable_state_metric_pairs": 129,
+    "exact_repeats": 4
+   }
+  },
+  "by_metric": {
+   "generated": 4,
+   "collected": 2,
+   "treated": 2,
+   "landfilled": 1
+  },
+  "repeats": [
+   {
+    "state": "Chhattisgarh",
+    "metric": "collected",
+    "years": [
+     "2019-20",
+     "2020-21"
+    ],
+    "value_tpd": 1650.0,
+    "raw_cells": [
+     "1650",
+     "1650"
+    ],
+    "names_in_csv": [
+     "Chhattisgarh",
+     "Chhattisgarh"
+    ],
+    "uses_name_alias": false,
+    "value_is_zero": false
+   },
+   {
+    "state": "Chhattisgarh",
+    "metric": "generated",
+    "years": [
+     "2019-20",
+     "2020-21"
+    ],
+    "value_tpd": 1650.0,
+    "raw_cells": [
+     "1650",
+     "1650"
+    ],
+    "names_in_csv": [
+     "Chhattisgarh",
+     "Chhattisgarh"
+    ],
+    "uses_name_alias": false,
+    "value_is_zero": false
+   },
+   {
+    "state": "Delhi",
+    "metric": "treated",
+    "years": [
+     "2019-20",
+     "2020-21"
+    ],
+    "value_tpd": 5193.57,
+    "raw_cells": [
+     "5193.57",
+     "5193.57"
+    ],
+    "names_in_csv": [
+     "Delhi",
+     "Delhi"
+    ],
+    "uses_name_alias": false,
+    "value_is_zero": false
+   },
+   {
+    "state": "Meghalaya",
+    "metric": "treated",
+    "years": [
+     "2019-20",
+     "2020-21"
+    ],
+    "value_tpd": 9.64,
+    "raw_cells": [
+     "9.64",
+     "9.64"
+    ],
+    "names_in_csv": [
+     "Meghalaya",
+     "Meghalaya"
+    ],
+    "uses_name_alias": false,
+    "value_is_zero": false
+   },
+   {
+    "state": "Uttar Pradesh",
+    "metric": "landfilled",
+    "years": [
+     "2019-20",
+     "2020-21"
+    ],
+    "value_tpd": 0.0,
+    "raw_cells": [
+     "0",
+     "0"
+    ],
+    "names_in_csv": [
+     "Uttar Pradesh",
+     "Uttar Pradesh"
+    ],
+    "uses_name_alias": false,
+    "value_is_zero": true
+   },
+   {
+    "state": "Dadra and Nagar Haveli and Daman and Diu",
+    "metric": "collected",
+    "years": [
+     "2020-21",
+     "2021-22"
+    ],
+    "value_tpd": 267.0,
+    "raw_cells": [
+     "267",
+     "267"
+    ],
+    "names_in_csv": [
+     "DDDNH",
+     "DNH&DD"
+    ],
+    "uses_name_alias": true,
+    "value_is_zero": false
+   },
+   {
+    "state": "Dadra and Nagar Haveli and Daman and Diu",
+    "metric": "generated",
+    "years": [
+     "2020-21",
+     "2021-22"
+    ],
+    "value_tpd": 267.0,
+    "raw_cells": [
+     "267",
+     "267"
+    ],
+    "names_in_csv": [
+     "DDDNH",
+     "DNH&DD"
+    ],
+    "uses_name_alias": true,
+    "value_is_zero": false
+   },
+   {
+    "state": "Uttar Pradesh",
+    "metric": "generated",
+    "years": [
+     "2020-21",
+     "2021-22"
+    ],
+    "value_tpd": 14710.0,
+    "raw_cells": [
+     "14710",
+     "14,710"
+    ],
+    "names_in_csv": [
+     "Uttar Pradesh",
+     "Uttar Pradesh"
+    ],
+    "uses_name_alias": false,
+    "value_is_zero": false
+   },
+   {
+    "state": "West Bengal",
+    "metric": "generated",
+    "years": [
+     "2020-21",
+     "2021-22"
+    ],
+    "value_tpd": 13709.0,
+    "raw_cells": [
+     "13709",
+     "13,709"
+    ],
+    "names_in_csv": [
+     "West Bengal",
+     "West Bengal"
+    ],
+    "uses_name_alias": false,
+    "value_is_zero": false
+   }
+  ],
+  "caution": "A repeated figure can have innocent causes (e.g. an estimate carried forward unchanged, a population-based norm not updated, a state re-submitting last year's figure). It is not evidence of fabrication, and no rate of repeats 'expected by chance' is claimed here."
+ },
+ "interpretation_limits": [
+  "State totals are a different data-generating process from ward-level trip logs; conformity or non-conformity here says little about whether ward trip logs would follow Benford's Law.",
+  "With n ~ 36 per year x metric, power is low: 'conforms' is weak evidence of anything.",
+  "'does_not_conform' would be a reason to look closer, not evidence of fabrication: state totals are shaped by state population sizes, estimation norms and rounding conventions."
+ ]
+}

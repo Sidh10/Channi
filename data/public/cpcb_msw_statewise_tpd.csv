@@ -1,0 +1,425 @@
+report_year,state,metric,raw_cell,value_tpd,parse_status,source_file,page
+2019-20,Andhra Pradesh,generated,6766,6766.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Andhra Pradesh,collected,6140,6140.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Andhra Pradesh,treated,1059,1059.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Andhra Pradesh,landfilled,203,203.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Arunachal Pradesh,generated,285.65,285.65,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Arunachal Pradesh,collected,223.56,223.56,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Arunachal Pradesh,treated,Nil,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Arunachal Pradesh,landfilled,127.72,127.72,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Assam,generated,1271.305,1271.305,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Assam,collected,922.4115,922.4115,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Assam,treated,41.6625,41.6625,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Assam,landfilled,880.749,880.749,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Bihar,generated,4334,4334.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Bihar,collected,Yes,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Bihar,treated,Not,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Bihar,landfilled,No,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Chhattisgarh,generated,1650,1650.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Chhattisgarh,collected,1650,1650.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Chhattisgarh,treated,p1r3o8v5id ed,1385.0,recovered_from_overlap,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Chhattisgarh,landfilled,265,265.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Goa,generated,188.88,188.88,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Goa,collected,180.38,180.38,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Goa,treated,148.91,148.91,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Goa,landfilled,15.59,15.59,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Gujarat,generated,-,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Gujarat,collected,10755,10755.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Gujarat,treated,6924,6924.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Gujarat,landfilled,3831,3831.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Haryana,generated,5231.9,5231.9,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Haryana,collected,4808.8,4808.8,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Haryana,treated,1620.6,1620.6,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Haryana,landfilled,3188.2,3188.2,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Himachal Pradesh,generated,393,393.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Himachal Pradesh,collected,354,354.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Himachal Pradesh,treated,230,230.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Himachal Pradesh,landfilled,124,124.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Jammu & Kashmir,generated,1518.91,1518.91,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Jammu & Kashmir,collected,1464.65,1464.65,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Jammu & Kashmir,treated,540.19,540.19,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Jammu & Kashmir,landfilled,No,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Jharkhand,generated,2188.97,2188.97,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Jharkhand,collected,1847.38,1847.38,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Jharkhand,treated,731.76,731.76,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Jharkhand,landfilled,s1a1n7i9ta.6ry8,1179.68,recovered_from_overlap,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Karnataka,generated,12258.2,12258.2,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Karnataka,collected,10011,10011.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Karnataka,treated,4489,4489.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Karnataka,landfilled,Not,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Kerala,generated,3521,3521.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Kerala,collected,880,880.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Kerala,treated,1837,1837.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Kerala,landfilled,pNrootv ided,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,4
+2019-20,Madhya Pradesh,generated,7980,7980.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Madhya Pradesh,collected,7193,7193.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Madhya Pradesh,treated,6431,6431.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Madhya Pradesh,landfilled,762,762.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Maharashtra,generated,22945.256,22945.256,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Maharashtra,collected,22779.31,22779.31,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Maharashtra,treated,16037.26,16037.26,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Maharashtra,landfilled,6907.98,6907.98,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Manipur,generated,265,265.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Manipur,collected,192.4,192.4,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Manipur,treated,103.57,103.57,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Manipur,landfilled,88.63,88.63,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Meghalaya,generated,153.18,153.18,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Meghalaya,collected,119.19,119.19,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Meghalaya,treated,9.64,9.64,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Meghalaya,landfilled,Nil,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Mizoram,generated,348.19,348.19,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Mizoram,collected,313,313.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Mizoram,treated,278.4,278.4,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Mizoram,landfilled,Nil,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Nagaland,generated,306.1,306.1,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Nagaland,collected,255.9,255.9,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Nagaland,treated,24,24.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Nagaland,landfilled,6,6.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Odisha,generated,2208.6,2208.6,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Odisha,collected,2123.3,2123.3,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Odisha,treated,202.4,202.4,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Odisha,landfilled,1920.9,1920.9,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Punjab,generated,4477.542,4477.542,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Punjab,collected,4413.952,4413.952,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Punjab,treated,2112.457,2112.457,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Punjab,landfilled,2301.495,2301.495,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Rajasthan,generated,6659.38,6659.38,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Rajasthan,collected,6475.9,6475.9,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Rajasthan,treated,1190.93,1190.93,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Rajasthan,landfilled,5112.66,5112.66,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Sikkim,generated,74.7,74.7,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Sikkim,collected,74.6,74.6,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Sikkim,treated,12.56,12.56,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Sikkim,landfilled,62.032,62.032,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Tamil Nadu,generated,14228,14228.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Tamil Nadu,collected,13955,13955.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Tamil Nadu,treated,6620,6620.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Tamil Nadu,landfilled,6765,6765.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Telangana,generated,9285,9285.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Telangana,collected,9270,9270.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Telangana,treated,6070,6070.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Telangana,landfilled,593,593.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Tripura,generated,411.32,411.32,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Tripura,collected,380.8,380.8,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Tripura,treated,253.6,253.6,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Tripura,landfilled,127.2,127.2,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Uttarakhand,generated,1610.942,1610.942,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Uttarakhand,collected,1481.057,1481.057,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Uttarakhand,treated,716.637,716.637,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Uttarakhand,landfilled,-,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Uttar Pradesh,generated,14468,14468.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Uttar Pradesh,collected,13955,13955.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Uttar Pradesh,treated,5395,5395.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Uttar Pradesh,landfilled,0,0.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,West Bengal,generated,13980,13980.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,West Bengal,collected,12062,12062.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,West Bengal,treated,916,916.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,West Bengal,landfilled,334,334.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Andaman and,generated,121,121.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Andaman and,collected,115,115.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Andaman and,treated,50,50.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Andaman and,landfilled,65,65.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,NCihcaonbdairg aIsrlha nds,generated,450,450.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,NCihcaonbdairg aIsrlha nds,collected,450,450.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,NCihcaonbdairg aIsrlha nds,treated,179.61,179.61,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,NCihcaonbdairg aIsrlha nds,landfilled,270.39,270.39,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,DDDNH,generated,184,184.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,DDDNH,collected,191,191.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,DDDNH,treated,97,97.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,DDDNH,landfilled,DNH – Not Provided Daman – Not Provided Diu - 30,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Delhi,generated,10470.57,10470.57,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Delhi,collected,10466.57,10466.57,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Delhi,treated,5193.57,5193.57,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Delhi,landfilled,5276,5276.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Lakshadweep,generated,32.55,32.55,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Lakshadweep,collected,32.55,32.55,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Lakshadweep,treated,11.44,11.44,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Lakshadweep,landfilled,Nil,,excluded,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Puducherry,generated,580,580.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Puducherry,collected,517,517.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Puducherry,treated,61,61.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2019-20,Puducherry,landfilled,456,456.0,clean,cpcb_MSW_AnnualReport_2019-20.pdf,5
+2020-21,Andhra Pradesh,generated,6898,6898.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Andhra Pradesh,collected,6829,6829.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Andhra Pradesh,treated,1133,1133.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Andhra Pradesh,landfilled,205,205.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Arunachal Pradesh,generated,236.51,236.51,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Arunachal Pradesh,collected,202.11,202.11,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Arunachal Pradesh,treated,Nil,,excluded,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Arunachal Pradesh,landfilled,27.5,27.5,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Assam,generated,1199,1199.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Assam,collected,1091,1091.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Assam,treated,41.4,41.4,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Assam,landfilled,0,0.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Bihar,generated,4281.27,4281.27,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Bihar,collected,4013.55,4013.55,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Bihar,treated,Not provided,,excluded,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Bihar,landfilled,No,,excluded,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Chhattisgarh,generated,1650,1650.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Chhattisgarh,collected,1650,1650.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Chhattisgarh,treated,1650,1650.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Chhattisgarh,landfilled,0,0.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Goa,generated,226.87,226.87,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Goa,collected,218.87,218.87,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Goa,treated,197.47,197.47,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Goa,landfilled,22.05,22.05,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Gujarat,generated,10373.79,10373.79,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Gujarat,collected,10332,10332.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Gujarat,treated,6946,6946.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Gujarat,landfilled,3385.82,3385.82,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Haryana,generated,5352.12,5352.12,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Haryana,collected,5291.41,5291.41,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Haryana,treated,3123.9,3123.9,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Haryana,landfilled,2167.51,2167.51,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Himachal Pradesh,generated,346,346.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Himachal Pradesh,collected,332,332.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Himachal Pradesh,treated,221,221.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Himachal Pradesh,landfilled,111,111.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Jammu & Kashmir,generated,1463.23,1463.23,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Jammu & Kashmir,collected,1437.28,1437.28,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Jammu & Kashmir,treated,547.5,547.5,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Jammu & Kashmir,landfilled,376,376.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,4
+2020-21,Jharkhand,generated,2226.39,2226.39,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Jharkhand,collected,1851.65,1851.65,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Jharkhand,treated,758.26,758.26,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Jharkhand,landfilled,1086.33,1086.33,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Karnataka,generated,11085,11085.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Karnataka,collected,10198,10198.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Karnataka,treated,6817,6817.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Karnataka,landfilled,1250,1250.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Kerala,generated,3543,3543.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Kerala,collected,964.76,964.76,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Kerala,treated,2550,2550.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Kerala,landfilled,Not Provided,,excluded,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Madhya Pradesh,generated,8022.5,8022.5,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Madhya Pradesh,collected,7235.5,7235.5,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Madhya Pradesh,treated,6472,6472.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Madhya Pradesh,landfilled,763.5,763.5,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Maharashtra,generated,22632.71,22632.71,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Maharashtra,collected,22584.4,22584.4,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Maharashtra,treated,15056.1,15056.1,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Maharashtra,landfilled,1355.36 (Unscientif ically disposed= 6221.5),,excluded,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Manipur,generated,282.3,282.3,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Manipur,collected,190.3,190.3,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Manipur,treated,108.6,108.6,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Manipur,landfilled,81.7,81.7,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Meghalaya,generated,107.01,107.01,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Meghalaya,collected,93.02,93.02,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Meghalaya,treated,9.64,9.64,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Meghalaya,landfilled,83.4,83.4,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Mizoram,generated,345.47,345.47,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Mizoram,collected,275.92,275.92,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Mizoram,treated,269.71,269.71,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Mizoram,landfilled,0,0.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Nagaland,generated,330.49,330.49,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Nagaland,collected,285.49,285.49,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Nagaland,treated,122,122.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Nagaland,landfilled,7.5,7.5,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Odisha,generated,2132.95,2132.95,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Odisha,collected,2097.14,2097.14,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Odisha,treated,1038.31,1038.31,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Odisha,landfilled,1034.33,1034.33,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Punjab,generated,4338.37,4338.37,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Punjab,collected,4278.86,4278.86,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Punjab,treated,1894.04,1894.04,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Punjab,landfilled,2384.82,2384.82,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Rajasthan,generated,6897.16,6897.16,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Rajasthan,collected,6720.476,6720.476,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Rajasthan,treated,1210.46,1210.46,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Rajasthan,landfilled,5082.16,5082.16,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Sikkim,generated,71.9,71.9,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Sikkim,collected,71.9,71.9,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Sikkim,treated,20.35,20.35,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Sikkim,landfilled,51.55,51.55,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Tamil Nadu,generated,13422,13422.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Tamil Nadu,collected,12844,12844.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Tamil Nadu,treated,9430.35,9430.35,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Tamil Nadu,landfilled,2301.04,2301.04,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Telangana,generated,9965,9965.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Telangana,collected,9965,9965.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Telangana,treated,7530,7530.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Telangana,landfilled,991,991.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Tripura,generated,333.9,333.9,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Tripura,collected,317.69,317.69,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Tripura,treated,214.06,214.06,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Tripura,landfilled,12.9,12.9,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Uttarakhand,generated,1458.46,1458.46,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Uttarakhand,collected,1378.99,1378.99,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Uttarakhand,treated,779.85,779.85,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Uttarakhand,landfilled,-,,excluded,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Uttar Pradesh,generated,14710,14710.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Uttar Pradesh,collected,14292,14292.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Uttar Pradesh,treated,5520,5520.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Uttar Pradesh,landfilled,0,0.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,West Bengal,generated,13709,13709.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,West Bengal,collected,13356,13356.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,West Bengal,treated,667.6,667.6,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,West Bengal,landfilled,202.23,202.23,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Andaman and Nicobar Islands,generated,89,89.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Andaman and Nicobar Islands,collected,82,82.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Andaman and Nicobar Islands,treated,75,75.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Andaman and Nicobar Islands,landfilled,7,7.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Chandigarh,generated,513,513.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Chandigarh,collected,513,513.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Chandigarh,treated,69,69.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Chandigarh,landfilled,444,444.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,DDDNH,generated,267,267.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,DDDNH,collected,267,267.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,DDDNH,treated,237,237.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,DDDNH,landfilled,14.5,14.5,clean,cpcb_MSW_AnnualReport_2020-21.pdf,5
+2020-21,Delhi,generated,10990,10990.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Delhi,collected,10990,10990.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Delhi,treated,5193.57,5193.57,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Delhi,landfilled,5533,5533.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Lakshadweep,generated,35,35.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Lakshadweep,collected,17.13,17.13,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Lakshadweep,treated,17.13,17.13,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Lakshadweep,landfilled,Nil,,excluded,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Puducherry,generated,504.5,504.5,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Puducherry,collected,482,482.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Puducherry,treated,36,36.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2020-21,Puducherry,landfilled,446,446.0,clean,cpcb_MSW_AnnualReport_2020-21.pdf,6
+2021-22,Andhra Pradesh,generated,"6,890",6890.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Andhra Pradesh,collected,"6,890",6890.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Andhra Pradesh,treated,"1,558",1558.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Andhra Pradesh,landfilled,Not provided,,excluded,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Andaman and Nicobar,generated,79,79.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Andaman and Nicobar,collected,78,78.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Andaman and Nicobar,treated,74,74.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Andaman and Nicobar,landfilled,2,2.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Arunachal Pradesh,generated,228,228.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Arunachal Pradesh,collected,199,199.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Arunachal Pradesh,treated,9,9.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Arunachal Pradesh,landfilled,Not provided,,excluded,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Assam,generated,"1,589",1589.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Assam,collected,"1,333",1333.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Assam,treated,575,575.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Assam,landfilled,744,744.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Bihar,generated,"4,975",4975.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Bihar,collected,Not provided,,excluded,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Bihar,treated,Not provided,,excluded,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Bihar,landfilled,Not provided,,excluded,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Chandigarh,generated,540,540.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Chandigarh,collected,540,540.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Chandigarh,treated,83,83.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Chandigarh,landfilled,486,486.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Chhattisgarh,generated,"1,820",1820.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Chhattisgarh,collected,"1,820",1820.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Chhattisgarh,treated,"1,790",1790.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Chhattisgarh,landfilled,30,30.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,DNH&DD,generated,267,267.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,DNH&DD,collected,267,267.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,DNH&DD,treated,246,246.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,DNH&DD,landfilled,21,21.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Delhi,generated,"11,108",11108.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Delhi,collected,"11,108",11108.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Delhi,treated,"5,280",5280.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Delhi,landfilled,"5,828",5828.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,6
+2021-22,Goa,generated,211,211.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Goa,collected,207,207.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Goa,treated,197,197.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Goa,landfilled,10,10.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Gujarat,generated,"10,095",10095.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Gujarat,collected,"10,095",10095.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Gujarat,treated,"8,682",8682.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Gujarat,landfilled,"1,003",1003.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Haryana,generated,"8,766",8766.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Haryana,collected,"6,691",6691.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Haryana,treated,"4,297",4297.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Haryana,landfilled,"2,218",2218.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Himachal Pradesh,generated,383,383.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Himachal Pradesh,collected,349,349.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Himachal Pradesh,treated,269,269.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Himachal Pradesh,landfilled,80,80.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Jammu & Kashmir,generated,"1,550",1550.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Jammu & Kashmir,collected,"1,540",1540.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Jammu & Kashmir,treated,606,606.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Jammu & Kashmir,landfilled,390,390.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Jharkhand,generated,"2,404",2404.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Jharkhand,collected,"1,969",1969.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Jharkhand,treated,843,843.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Jharkhand,landfilled,930,930.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Karnataka,generated,"13,034",13034.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Karnataka,collected,"11,655",11655.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Karnataka,treated,"5,440",5440.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Karnataka,landfilled,"4,198",4198.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Kerala,generated,"3,472",3472.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Kerala,collected,"1,283 and 1,048 decentralized processing",,excluded,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Kerala,treated,"2,691",2691.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Kerala,landfilled,-,,excluded,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Ladakh,generated,52,52.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Ladakh,collected,42,42.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Ladakh,treated,20,20.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Ladakh,landfilled,15,15.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Lakshadweep,generated,18,18.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Lakshadweep,collected,18,18.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Lakshadweep,treated,18,18.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Lakshadweep,landfilled,0,0.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Madhya Pradesh,generated,"7,115",7115.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Madhya Pradesh,collected,"6,132",6132.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Madhya Pradesh,treated,"6,059",6059.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Madhya Pradesh,landfilled,76,76.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Maharashtra,generated,"23,531",23531.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Maharashtra,collected,"23,044",23044.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Maharashtra,treated,"19,980",19980.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Maharashtra,landfilled,"2,067",2067.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Manipur,generated,282,282.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Manipur,collected,199,199.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Manipur,treated,133,133.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Manipur,landfilled,66,66.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Meghalaya,generated,165,165.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Meghalaya,collected,137,137.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Meghalaya,treated,27,27.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Meghalaya,landfilled,119,119.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Mizoram,generated,374,374.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Mizoram,collected,313,313.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Mizoram,treated,234,234.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Mizoram,landfilled,8,8.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Nagaland,generated,664,664.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Nagaland,collected,306,306.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Nagaland,treated,116,116.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Nagaland,landfilled,299,299.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Odisha,generated,"2,103",2103.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Odisha,collected,"2,020",2020.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Odisha,treated,"1,356",1356.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Odisha,landfilled,738,738.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Puducherry,generated,383,383.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Puducherry,collected,383,383.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Puducherry,treated,58,58.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Puducherry,landfilled,325,325.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Punjab,generated,"4,222",4222.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Punjab,collected,"4,207",4207.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Punjab,treated,"1,471",1471.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Punjab,landfilled,"2,736",2736.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Rajasthan,generated,"7,973",7973.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Rajasthan,collected,"7,859",7859.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Rajasthan,treated,"1,926",1926.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Rajasthan,landfilled,"5,525",5525.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Sikkim,generated,66,66.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Sikkim,collected,66,66.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Sikkim,treated,18,18.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Sikkim,landfilled,48,48.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Tamil Nadu,generated,"14,586",14586.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Tamil Nadu,collected,"14,471",14471.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Tamil Nadu,treated,"7,206",7206.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Tamil Nadu,landfilled,"6,776",6776.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Telangana,generated,"11,057",11057.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Telangana,collected,"11,057",11057.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Telangana,treated,"8,611",8611.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Telangana,landfilled,"1,011",1011.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Tripura,generated,333,333.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Tripura,collected,322,322.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Tripura,treated,220,220.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Tripura,landfilled,15,15.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Uttar Pradesh,generated,"14,710",14710.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Uttar Pradesh,collected,"14,710",14710.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Uttar Pradesh,treated,"7,321",7321.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Uttar Pradesh,landfilled,"4,389",4389.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Uttarakhand,generated,"1,585",1585.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Uttarakhand,collected,"1,452",1452.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Uttarakhand,treated,"1,050",1050.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,Uttarakhand,landfilled,115,115.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,West Bengal,generated,"13,709",13709.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,West Bengal,collected,"13,687",13687.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,West Bengal,treated,"3,047",3047.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
+2021-22,West Bengal,landfilled,"1,187",1187.0,clean,cpcb_MSW_AnnualReport_2021-22.pdf,7
